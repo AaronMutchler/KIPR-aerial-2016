@@ -1,0 +1,105 @@
+"use strict";
+
+var bebop = require("/Users/Aaron/node_modules/node-bebop");
+var net = require('net');
+
+var str = ""
+var speed = 10
+var drone = bebop.createClient();
+
+var client = net.createServer(function (socket) {
+
+  socket.on('data', function (data) {
+    str = data.toString();
+    console.log(str +'\n')
+    switch (str) {
+      case "forward":
+        console.log('goin forward\n')
+        drone.forward(speed);
+        break;
+      case "backward":
+        drone.backward(speed);
+        break;
+      case "left":
+        drone.left(speed);
+        break;
+      case "right":
+        drone.right(speed);
+        break;
+      case "counterClockwise":
+        drone.counterClockwise(speed);
+        break;
+      case "clockwise":
+        drone.clockwise(speed);
+        break;
+      case "up":
+        drone.up(speed);
+        break;
+      case "down":
+        drone.down(speed);
+        break;
+      case "speed10":
+        speed = 10;
+        break;
+      case "speed20":
+        speed = 20;
+        break;
+      case "speed30":
+        speed = 30;
+        break;
+      case "speed40":
+        speed = 40;
+        break;
+      case "speed50":
+        speed = 50;
+        break;
+      case "speed60":
+        speed = 60;
+        break;
+      case "speed70":
+        speed = 70;
+        break;
+      case "speed80":
+        speed = 80;
+        break;
+      case "speed90":
+        speed = 90;
+        break;
+      case "speed100":
+        speed = 100;
+        break;
+      case "stop":
+        drone.stop();
+        break;
+      case "connect":
+        drone.connect(function () {});
+        break;
+      case "takeoff":
+        drone.takeoff();
+        break;
+      case "land":
+        drone.land();
+        break;
+      case "emergency":
+        drone.emergency();
+        break;
+    }
+  });
+})
+.listen(8080);
+
+client.on('error', function(e) {
+    if(e.code == 'ECONNREFUSED') {
+        console.log('Is the server running at ' + 8080 + '?');
+
+        client.setTimeout(4000, function() {
+            client.connect(8080, 'localhost', function(){
+                console.log('CONNECTED TO: ' + 'localhost' + ':' + 8080);
+                client.write('I am the inner superman');
+            });
+        });
+
+        console.log('Timeout for 5 seconds before trying port:' + PORT + ' again');
+
+    }
+});
