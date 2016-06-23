@@ -85,21 +85,10 @@ var client = net.createServer(function (socket) {
         break;
     }
   });
+
+  socket.on('end', function() {
+    console.log('Disconnected');
+    drone.land();
+  });
 })
 .listen(8080);
-
-client.on('error', function(e) {
-    if(e.code == 'ECONNREFUSED') {
-        console.log('Is the server running at ' + 8080 + '?');
-
-        client.setTimeout(4000, function() {
-            client.connect(8080, 'localhost', function(){
-                console.log('CONNECTED TO: ' + 'localhost' + ':' + 8080);
-                client.write('I am the inner superman');
-            });
-        });
-
-        console.log('Timeout for 5 seconds before trying port:' + PORT + ' again');
-
-    }
-});
