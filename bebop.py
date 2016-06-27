@@ -8,7 +8,7 @@ import socket
 import time
 
 
-class drone(object):
+class Bebop(object):
     '''
     classdocs
     '''
@@ -27,7 +27,7 @@ class drone(object):
 
     def move(self, direction, speed):
         '''
-        Moves the drone in a given direction at a given speed (1-10)
+        Moves the drone in a given direction at a given speed (0-100)
         
         - Direction must be one of the following:
             - 'forward'
@@ -43,8 +43,7 @@ class drone(object):
         :type direction: string
         :type speed: int
         '''
-        self._set_speed(speed)
-        self._send_string(direction)
+        self._send_string(direction + ' ' + speed)
 
     def move_seconds(self, direction, speed, seconds):
         '''
@@ -76,7 +75,6 @@ class drone(object):
         Stops the drone's current motion and resets the speed to 1
         '''
         self._send_string('stop')
-        self._set_speed(1)
 
 
     def land(self):
@@ -95,6 +93,7 @@ class drone(object):
 
     def takeoff(self):
         self._send_string('takeoff')
+        time.sleep(3)
 
 
     def emergency(self):
@@ -106,27 +105,11 @@ class drone(object):
         self.client.close()
 
 
-    def _set_speed(self, speed):
-        '''
-        Changes the speed of the drone. Value must be between 1 and 10
-        
-        Preconditions:
-        :type speed: int
-        '''
-        if speed > 10:
-            speed = 10
-        elif speed < 1:
-            speed = 1
-        speed_msg = 'speed' + str(speed * 10)
-        self._send_string(speed_msg)
-
-
     def _send_string(self, string):
         '''
         Sends the string to a client
         
         Preconditions:
-        :type client: socket
         :type string: string
         '''
         self.client.send(str.encode(string))
