@@ -1,7 +1,7 @@
 "use strict";
 
-var bebop = require("/node_modules/node-bebop");
-var keypress = require("/node_modules/keypress");
+var bebop = require("/home/pi/node_modules/node-bebop");
+var keypress = require("/home/pi/node_modules/keypress");
 var net = require('net');
 
 var str = ""
