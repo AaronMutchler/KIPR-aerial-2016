@@ -53,6 +53,7 @@ net.createServer(function (socket) {
       }
     }
     catch (error) {
+      console.log(error)
       drone.land();
     }
 
