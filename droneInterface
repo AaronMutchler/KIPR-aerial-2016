@@ -21,7 +21,8 @@ process.stdin.on('keypress', function (ch, key) {
     drone.emergency();
   }
   if (key && key.name == 'c') {
-    drone.connect();
+    var connected = drone.connect();
+    console.log(connected);
   }
   if (key && key.name == 't') {
     drone.takeoff();
@@ -34,9 +35,10 @@ process.stdin.resume();
 net.createServer(function (socket) {
   socket.on('data', function (data) {
     var command = data.toString().split(' ');
+    console.log(data.toString());
     var function_name = command[0];
     if (command.length == 2) {
-      arg = parseInt(command[1]);
+      var arg = parseInt(command[1]);
       drone[function_name](arg);
     } else {
       drone[function_name]();

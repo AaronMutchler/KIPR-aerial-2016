@@ -43,7 +43,7 @@ class Bebop(object):
         :type direction: string
         :type speed: int
         '''
-        self._send_string(direction + ' ' + speed)
+        self._send_string(direction + ' ' + str(speed))
 
     def move_seconds(self, direction, speed, seconds):
         '''
