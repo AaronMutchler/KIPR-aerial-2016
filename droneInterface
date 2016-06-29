@@ -50,6 +50,9 @@ net.createServer(function (socket) {
         drone.takeoff();
       } else if (function_name == 'land') {
         drone.land();
+      } else {
+        console.log("Function Name is not connect, takeoff, or land");
+        console.log(function_name);
       }
     }
     catch (error) {
