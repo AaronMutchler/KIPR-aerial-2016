@@ -33,35 +33,15 @@ process.stdin.resume();
 
 net.createServer(function (socket) {
   socket.on('data', function (data) {
-    //console.log(data.toString() + '\n');
     var command = data.toString().split(' ');
     var function_name = command[0];
-    var old_function_call = 'drone.' + function_name + '()';
-    var function_call = 
+    var fn = window[function_name];
     if (command.length == 2) {
-      var arg = command[1];
-      function_call = function_call.replace('()', '(' + arg + ')');
+      arg = parseInt(command[1]);
+      fn.apply(drone, arg);
+    } else {
+      fn.apply(drone, null)
     }
-    console.log(function_call);
-    try {
-      eval(function_call);
-      /*if (function_name == 'connect') {
-        drone.connect();
-      } else if (function_name == 'takeoff') {
-        drone.takeoff();
-      } else if (function_name == 'land') {
-        drone.land();
-      } else {
-        console.log("Function Name is not connect, takeoff, or land");
-        console.log(function_name);
-      }*/
-    }
-    catch (error) {
-      console.log(error)
-      drone.land();
-    }
-
-
   });
 
   socket.on('end', function() {
