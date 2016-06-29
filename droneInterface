@@ -36,7 +36,8 @@ net.createServer(function (socket) {
     //console.log(data.toString() + '\n');
     var command = data.toString().split(' ');
     var function_name = command[0];
-    var function_call = 'drone.' + function_name + '()';
+    var old_function_call = 'drone.' + function_name + '()';
+    var function_call = 
     if (command.length == 2) {
       var arg = command[1];
       function_call = function_call.replace('()', '(' + arg + ')');
