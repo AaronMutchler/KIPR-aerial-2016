@@ -20,6 +20,12 @@ process.stdin.on('keypress', function (ch, key) {
   if (key && key.name == 'e') {
     drone.emergency();
   }
+  if (key && key.name == 'c') {
+    drone.connect();
+  }
+  if (key && key.name == 't') {
+    drone.takeoff();
+  }
 });
 
 process.stdin.setRawMode(true);
