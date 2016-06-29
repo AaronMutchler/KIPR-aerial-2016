@@ -24,8 +24,6 @@ def pid(desired_point, kP=0):
     '''
     :type desired_point: Point
     :type kP: float
-    :type kI: float
-    :type kD: float
     '''
 
 
