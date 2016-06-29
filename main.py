@@ -17,10 +17,10 @@ def main():
 
     drone.connect()
     drone.takeoff()
-    time.sleep(2)
-    drone.move_seconds('forward', 1, 5)
-    time.sleep(1)
-    drone.move_seconds('backward', 1, 5)
+    time.sleep(3)
+#    drone.move_seconds('forward', 1, 5)
+#    time.sleep(1)
+#    drone.move_seconds('backward', 1, 5)
     drone.land()
     drone.disconnect()
 
