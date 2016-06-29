@@ -1,7 +1,7 @@
 "use strict";
 
-var bebop = require("/Users/Aaron/node_modules/node-bebop");
-var keypress = require('../../keypress/');
+var bebop = require("/node_modules/node-bebop");
+var keypress = require("/node_modules/keypress");
 var net = require('net');
 
 var str = ""
