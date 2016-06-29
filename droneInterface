@@ -37,7 +37,12 @@ net.createServer(function (socket) {
     }
     console.log(function_call);
     try {
-      eval(function_call);
+      //eval(function_call);
+      if (function_name == 'connect') {
+        drone.connect();
+        drone.takeoff();
+        drone.land();
+      }
     }
     catch (error) {
       drone.land();
