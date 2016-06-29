@@ -35,13 +35,13 @@ net.createServer(function (socket) {
   socket.on('data', function (data) {
     var command = data.toString().split(' ');
     var function_name = command[0];
-    var fn = window[function_name];
-    if (command.length == 2) {
-      arg = parseInt(command[1]);
+    drone[function_name]();
+    /*if (command.length == 2) {
+      //arg = parseInt(command[1]);
       fn.apply(drone, arg);
     } else {
       fn.apply(drone, null)
-    }
+    }*/
   });
 
   socket.on('end', function() {
