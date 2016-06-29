@@ -40,7 +40,9 @@ net.createServer(function (socket) {
       //eval(function_call);
       if (function_name == 'connect') {
         drone.connect();
+      } else if (function_name == 'takeoff') {
         drone.takeoff();
+      } else if (function_name == 'land') {
         drone.land();
       }
     }
