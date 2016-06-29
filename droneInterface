@@ -40,8 +40,9 @@ net.createServer(function (socket) {
       arg = parseInt(command[1]);
       fn.apply(drone, arg);
     } else {
-      fn.apply(drone, null)
+      fn.apply(drone, null);
     }
+    console.log(function_name);
   });
 
   socket.on('end', function() {
