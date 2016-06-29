@@ -43,8 +43,8 @@ net.createServer(function (socket) {
     }
     console.log(function_call);
     try {
-      //eval(function_call);
-      if (function_name == 'connect') {
+      eval(function_call);
+      /*if (function_name == 'connect') {
         drone.connect();
       } else if (function_name == 'takeoff') {
         drone.takeoff();
@@ -53,7 +53,7 @@ net.createServer(function (socket) {
       } else {
         console.log("Function Name is not connect, takeoff, or land");
         console.log(function_name);
-      }
+      }*/
     }
     catch (error) {
       console.log(error)
