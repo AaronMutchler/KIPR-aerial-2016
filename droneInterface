@@ -27,7 +27,7 @@ process.stdin.on('keypress', function (ch, key) {
         drone.land();
         console.log("Asked the Parrot to Land");
         fs.unlink('./FLYING.txt', function () {});
-	
+
     } else if(key.name == 'e') {
 	// Same as Land, but Emergency
         send_to_drone = false;
@@ -45,6 +45,21 @@ process.stdin.on('keypress', function (ch, key) {
         send_to_drone = true; // Start accepting commands again
         fs.writeFile('./FLYING.txt', '', function () {});
         console.log("Asked the Parrot to Takeoff");
+    } else if (key.name == 'w') {
+        drone.forward(MOVE_SPEED);
+        console.log('Forward (directed by user)');
+    } else if (key.name == 's') {
+        drone.backward(MOVE_SPEED);
+        console.log('Backward (directed by user)');
+    } else if (key.name == 'a') {
+        drone.left(MOVE_SPEED);
+        console.log('Left (directed by user)');
+    } else if (key.name == 'd') {
+        drone.right(MOVE_SPEED);
+        console.log('Right (directed by user)');
+    } else if (key.name == ' ') {
+        drone.stop();
+        console.log('Stop (directed by user)');
     }
   }
 });
