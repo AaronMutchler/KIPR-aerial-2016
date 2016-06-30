@@ -5,15 +5,16 @@ Created on Jun 17, 2016
 import bebop
 import time
 import pixy
-import os
 
 class Point(object):
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
+
     def __repr__(self):
         return "({:3}, {:3})".format(self.x, self.y)
+
 
     def __sub__(self, other_point):
         return Point(self.x - other_point.x, self.y - other_point.y)
@@ -25,14 +26,11 @@ kP_x = 0.0125 * 5
 kP_y = 0.0215 * 5
 MAX_x = 10
 MAX_y = 10
-PID_DELAY = 0.1 # 0.01
-
-TIME = time.time()
-LOG_FILE = None
+PID_DELAY = 0.01
 
 def main():
     
-    drone = bebop.Bebop(8080, True)
+    drone = bebop.Bebop(8080)
     drone._send_string('send_to_drone_true')
 
     BLOCKS = pixy.BlockArray(1)
@@ -40,8 +38,6 @@ def main():
 
     drone.connect()
     drone.takeoff()
-    start_logging()
-
     time.sleep(1)
     drone.move_seconds('forward', 10, 2)
     
@@ -53,18 +49,12 @@ def main():
 
 
 def pid_loop(drone, desired, BLOCKS):
+
+
     while True:
         if False:
             drone.land()
             break
-
-        if os.path.exists("FLYING.txt"):
-            stop_logging()
-            while True:
-                if not os.path.exists("FLYING.txt"):
-                  start_logging()
-                  break
- 
         actual = take_picture(BLOCKS)
         react(drone, actual, desired)
         time.sleep(PID_DELAY)
@@ -72,22 +62,21 @@ def pid_loop(drone, desired, BLOCKS):
 
 def react(drone, actual, desired):
     if actual == None:
-        log()
         return
     
     error = actual - desired
+    fb = ''
+    rl = ''
 
-    fb = 'forward' if error.y > 0 else 'backward'
-    rl = 'right' if error.y > 0 else 'left'
-
-    speed_x = int(round(abs(min(error.x * kP_x, MAX_x))))
     speed_y = int(round(abs(min(error.y * kP_y, MAX_y))))
-
+    fb = 'forward' if error.y > 0 else 'backward'
+    speed_x = int(round(abs(min(error.x * kP_x, MAX_x))))
+    rl = 'right' if error.y > 0 else 'left'
     drone.move(fb, speed_y)
     drone.move(rl, speed_x)
-
-    log(actual, Point(speed_x, speed_y))
     
+    #print '{:4}, {:4}'.format(speed_x, speed_y)
+
 
 def take_picture(BLOCKS):
     block = get_block(BLOCKS)  # do error handling
@@ -98,25 +87,6 @@ def get_block(BLOCKS):
     count = pixy.pixy_get_blocks(1, BLOCKS)
     return BLOCKS[0] if count > 0 else None
 
-
-def start_logging():
-    global LOG_FILE
-    LOG_FILE = open('log.txt', 'w')
-    TIME = time.time()
-    print(LOG_FILE)
-
-def stop_logging():
-    close(LOG_FILE)
-
-def log(actual=None, speed=None):
-    seconds = time.time() - TIME
-    time_data = '{:5.2f}'.format(seconds)
-    position_data = ' X/Y: {:3} {:3}'.format(actual.x, actual.y) if actual else ''
-
-    speed_data = ' Fwd/Right: {:3} {:3}'.format(speed.x, speed.y) if speed else ''
-
-    LOG_FILE.write(time_data + speed_data + position_data + '\n')
-    print(time_data + speed_data + position_data)
 
 def run_from_input(drone):
     while True:

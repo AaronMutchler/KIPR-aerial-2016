@@ -3,6 +3,7 @@
 var bebop = require("/home/pi/node_modules/node-bebop");
 var keypress = require("/home/pi/node_modules/keypress");
 var net = require('net');
+var fs = require('fs');
 
 var str = ""
 var speed = 0
@@ -10,23 +11,41 @@ var drone = bebop.createClient();
 var send_to_drone = true;
 keypress(process.stdin);
 
+fs.writeFile('./FLYING.txt', '', function () {});
+
 process.stdin.on('keypress', function (ch, key) {
   console.log('got "keypress"', key);
-  if (key && key.name == 'q') {
-    process.exit();
-  }
-  if (key && key.name == 'l') {
-    drone.land();
-  }
-  if (key && key.name == 'e') {
-    drone.emergency();
-  }
-  if (key && key.name == 'c') {
-    var connected = drone.connect();
-    console.log(connected);
-  }
-  if (key && key.name == 't') {
-    drone.takeoff();
+  if (key) {
+    if (key.name == 'q') {
+        process.exit();
+        console.log("Exited");
+
+    } else if (key.name == 'l') {
+        // Land. Stop sending to Parrot.
+        // Tell the Python program that we landed.
+        send_to_drone = false;
+        drone.land();
+        console.log("Asked the Parrot to Land");
+        fs.unlink('./FLYING.txt', function () {});
+	
+    } else if(key.name == 'e') {
+	// Same as Land, but Emergency
+        send_to_drone = false;
+        drone.emergency();
+        console.log("Asked the Parrot to Emergency");
+
+    } else if (key.name == 'c') {
+        drone.connect();
+        console.log("Asked the Parrot to Connect");
+
+    } else if (key.name == 't') {
+        drone.stop();
+        drone.flatTrim();
+        drone.takeoff();
+        send_to_drone = true; // Start accepting commands again
+        fs.writeFile('./FLYING.txt', '', function () {});
+        console.log("Asked the Parrot to Takeoff");
+    }
   }
 });
 
@@ -39,27 +58,27 @@ net.createServer(function (socket) {
     console.log(data.toString());
 
     if (command == 'send_to_drone_true') {
-      send_to_drone = true;
-    }
-    else if (command == 'send_to_drone_false') {
-      send_to_drone = false;
-    }
-
-    else if (send_to_drone) {
-      var function_name = command[0];
-      if (command.length == 2) {
-        var arg = parseInt(command[1]);
-        drone[function_name](arg);
-      } else {
-        drone[function_name]();
-      }
+        send_to_drone = true;
+    } else if (command == 'send_to_drone_false') {
+        send_to_drone = false;
+    } else if (send_to_drone) {
+        var function_name = command[0];
+        if (command.length == 2) {
+          var arg = parseInt(command[1]);
+          drone[function_name](arg);
+        } else {
+          drone[function_name]();
+        }
     }
   });
 
+  // Socket from the Python program has closed.
+  // Tell the Parrot to land.
+  // Don't send any more commands to the Parrot until told otherwise.
   socket.on('end', function() {
-    console.log('Disconnected');
     drone.land();
-    Network.disconnect();
+    send_to_drone = false;
+    console.log('Disconnected');
   });
 })
 .listen(8080)
