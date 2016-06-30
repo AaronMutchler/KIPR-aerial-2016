@@ -41,11 +41,11 @@ net.createServer(function (socket) {
     if (command == 'send_to_drone_true') {
       send_to_drone = true;
     }
-    if (command == 'send_to_drone_false') {
+    else if (command == 'send_to_drone_false') {
       send_to_drone = false;
     }
 
-    if (send_to_drone) {
+    else if (send_to_drone) {
       var function_name = command[0];
       if (command.length == 2) {
         var arg = parseInt(command[1]);

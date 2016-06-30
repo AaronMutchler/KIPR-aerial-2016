@@ -24,18 +24,23 @@ CENTER = Point(160, 100)
 BLOCKS = pixy.BlockArray(1)
 kP_x = 0.0125 * 5
 kP_y = 0.0215 * 5
-MAX_x = 5
-MAX_y = 5
-PID_DELAY = 0.6
+MAX_x = 10
+MAX_y = 10
+PID_DELAY = 0.01
 
 def main():
     
     drone = bebop.Bebop(8080)
-    drone._send_string('send_to_drone_false')
+    drone._send_string('send_to_drone_true')
 
     BLOCKS = pixy.BlockArray(1)
     pixy.pixy_init()
 
+    drone.connect()
+    drone.takeoff()
+    time.sleep(1)
+    drone.move_seconds('forward', 10, 2)
+    
     desired = CENTER
     pid_loop(drone, CENTER, BLOCKS)
 
@@ -60,16 +65,15 @@ def react(drone, actual, desired):
         return
     
     error = actual - desired
+    fb = ''
+    rl = ''
 
-    speed_y = int(round(min(error.y * kP_y, MAX_y)))
-    if speed_y < 0:
-        speed_y = max(speed_y, -MAX_y)
-        
-    speed_x = int(round(min(error.x * kP_x, MAX_x)))
-    if speed_x < 0:
-        speed_x = max(speed_x, -MAX_x)
-    drone.move('forward', speed_y)
-    drone.move('right', speed_x)
+    speed_y = int(round(abs(min(error.y * kP_y, MAX_y))))
+    fb = 'forward' if error.y > 0 else 'backward'
+    speed_x = int(round(abs(min(error.x * kP_x, MAX_x))))
+    rl = 'right' if error.y > 0 else 'left'
+    drone.move(fb, speed_y)
+    drone.move(rl, speed_x)
     
     #print '{:4}, {:4}'.format(speed_x, speed_y)
 
