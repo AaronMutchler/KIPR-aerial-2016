@@ -14,7 +14,7 @@ class Bebop(object):
     '''
 
 
-    def __init__(self, port):
+    def __init__(self, port, send_to_drone=True):
         '''
         Constructs a new drone object with a connection to a given port
         
@@ -22,7 +22,13 @@ class Bebop(object):
         '''
         self.port = port
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.client.connect(('localhost', port))
+        self.send_to_drone = send_to_drone
+        if send_to_drone:
+            self.connect_socket()
+
+
+    def connect_socket(self):
+        self.client.connect(('localhost', self.port))
 
 
     def move(self, direction, speed):
@@ -112,8 +118,10 @@ class Bebop(object):
         Preconditions:
         :type string: string
         '''
-        self.client.send(str.encode(string))
-        time.sleep(.05)
+        if self.send_to_drone:
+            self.client.send(str.encode(string))
+            time.sleep(.05)
+        print(string)
 
 
 
