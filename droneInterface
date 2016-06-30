@@ -7,6 +7,7 @@ var net = require('net');
 var str = ""
 var speed = 0
 var drone = bebop.createClient();
+var send_to_drone = true;
 keypress(process.stdin);
 
 process.stdin.on('keypress', function (ch, key) {
@@ -36,12 +37,22 @@ net.createServer(function (socket) {
   socket.on('data', function (data) {
     var command = data.toString().split(' ');
     console.log(data.toString());
-    var function_name = command[0];
-    if (command.length == 2) {
-      var arg = parseInt(command[1]);
-      drone[function_name](arg);
-    } else {
-      drone[function_name]();
+
+    if (command == 'send_to_drone_true') {
+      send_to_drone = true;
+    }
+    if (command == 'send_to_drone_false') {
+      send_to_drone = false;
+    }
+
+    if (send_to_drone) {
+      var function_name = command[0];
+      if (command.length == 2) {
+        var arg = parseInt(command[1]);
+        drone[function_name](arg);
+      } else {
+        drone[function_name]();
+      }
     }
   });
 
