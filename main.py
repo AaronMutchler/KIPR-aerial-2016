@@ -30,7 +30,8 @@ PID_DELAY = 0.6
 
 def main():
     
-    drone = bebop.Bebop(8080, False)
+    drone = bebop.Bebop(8080)
+    drone._send_string('send_to_drone_false')
 
     BLOCKS = pixy.BlockArray(1)
     pixy.pixy_init()
