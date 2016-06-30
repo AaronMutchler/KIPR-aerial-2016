@@ -59,6 +59,7 @@ net.createServer(function (socket) {
   socket.on('end', function() {
     console.log('Disconnected');
     drone.land();
+    Network.disconnect();
   });
 })
 .listen(8080)
