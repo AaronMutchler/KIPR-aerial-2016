@@ -106,7 +106,7 @@ def start_logging():
     print(LOG_FILE)
 
 def stop_logging():
-    close(LOG_FILE)
+    os.close(LOG_FILE)
 
 def log(actual=None, speed=None):
     seconds = time.time() - TIME

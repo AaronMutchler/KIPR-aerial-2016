@@ -5,8 +5,9 @@ var keypress = require("/home/pi/node_modules/keypress");
 var net = require('net');
 var fs = require('fs');
 
-var str = ""
-var speed = 0
+var str = "";
+var MOVE_SPEED = 10;
+var speed = 0;
 var drone = bebop.createClient();
 var send_to_drone = true;
 keypress(process.stdin);
@@ -57,7 +58,7 @@ process.stdin.on('keypress', function (ch, key) {
     } else if (key.name == 'd') {
         drone.right(MOVE_SPEED);
         console.log('Right (directed by user)');
-    } else if (key.name == ' ') {
+    } else if (key.name == 'p') {
         drone.stop();
         console.log('Stop (directed by user)');
     }
