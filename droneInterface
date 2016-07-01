@@ -61,6 +61,8 @@ process.stdin.on('keypress', function (ch, key) {
     } else if (key.name == 'p') {
         drone.stop();
         console.log('Stop (directed by user)');
+    } else if (key.name == 'r') {
+        connect_to_python();
     }
   }
 });
@@ -68,6 +70,7 @@ process.stdin.on('keypress', function (ch, key) {
 process.stdin.setRawMode(true);
 process.stdin.resume();
 
+function connect_to_python() {
 net.createServer(function (socket) {
   socket.on('data', function (data) {
     var command = data.toString().split(' ');
@@ -94,7 +97,8 @@ net.createServer(function (socket) {
   socket.on('end', function() {
     drone.land();
     send_to_drone = false;
-    console.log('Disconnected');
+    console.log('Disconnected from Python');
   });
 })
 .listen(8080)
+}

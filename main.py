@@ -23,9 +23,9 @@ CENTER = Point(160, 100)
 BLOCKS = pixy.BlockArray(1)
 kP_x = 0.0125 * 5
 kP_y = 0.0215 * 5
-MAX_x = 10
-MAX_y = 10
-PID_DELAY = 0.1 # 0.01
+MAX_x = 20
+MAX_y = 20
+PID_DELAY = 0.01 # 0.01
 
 TIME = time.time()
 LOG_FILE = None
@@ -38,12 +38,12 @@ def main():
     BLOCKS = pixy.BlockArray(1)
     pixy.pixy_init()
 
-    drone.connect()
-    drone.takeoff()
+    #drone.connect()
+    #drone.takeoff()
     start_logging()
 
     time.sleep(1)
-    drone.move_seconds('forward', 10, 2)
+    #drone.move_seconds('forward', 10, 2)
     
     desired = CENTER
     pid_loop(drone, CENTER, BLOCKS)
@@ -58,10 +58,10 @@ def pid_loop(drone, desired, BLOCKS):
             drone.land()
             break
 
-        if os.path.exists("FLYING.txt"):
+        if not os.path.exists("FLYING.txt"):
             stop_logging()
             while True:
-                if not os.path.exists("FLYING.txt"):
+                if os.path.exists("FLYING.txt"):
                   start_logging()
                   break
  
@@ -86,7 +86,7 @@ def react(drone, actual, desired):
     drone.move(fb, speed_y)
     drone.move(rl, speed_x)
 
-    log(actual, Point(speed_x, speed_y))
+    log(actual, Point(speed_x, speed_y), fb, rl)
     
 
 def take_picture(BLOCKS):
@@ -106,17 +106,19 @@ def start_logging():
     print(LOG_FILE)
 
 def stop_logging():
-    os.close(LOG_FILE)
+    LOG_FILE.close()
 
-def log(actual=None, speed=None):
+def log(actual=None, speed=None, direction_y=None, direction_x=None):
     seconds = time.time() - TIME
     time_data = '{:5.2f}'.format(seconds)
     position_data = ' X/Y: {:3} {:3}'.format(actual.x, actual.y) if actual else ''
 
-    speed_data = ' Fwd/Right: {:3} {:3}'.format(speed.x, speed.y) if speed else ''
+    #speed_data = ' Fwd/Right: {:3} {:3}'.format(speed.x, speed.y) if speed else ''
+    speed_data = ' ' + direction_y + ': {:3} '.format(speed.y) + direction_x + ': {:3}'.format(speed.x) if speed else ''
 
-    LOG_FILE.write(time_data + speed_data + position_data + '\n')
-    print(time_data + speed_data + position_data)
+    #LOG_FILE.write(time_data + speed_data + position_data + '\n')
+    LOG_FILE.write(time_data + speed_data + '\n')
+    print(time_data + speed_data) #+ position_data)
 
 def run_from_input(drone):
     while True:
