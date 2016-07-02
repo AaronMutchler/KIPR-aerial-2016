@@ -120,8 +120,7 @@ class Bebop(object):
         '''
         if self.send_to_drone:
             self.client.send(str.encode(string))
-            time.sleep(.05)
-        print(string)
+            time.sleep(.01)
 
 
 

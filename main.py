@@ -23,9 +23,16 @@ CENTER = Point(160, 100)
 BLOCKS = pixy.BlockArray(1)
 kP_x = 0.0125 * 5
 kP_y = 0.0215 * 5
+
+kD_x = 0.0125 * 5
+kD_y = 0.0215 * 5
+
 MAX_x = 20
 MAX_y = 20
-PID_DELAY = 0.01 # 0.01
+
+PREV_ERROR = Point(0, 0)
+
+PID_DELAY = 0.02 # 0.01
 
 TIME = time.time()
 LOG_FILE = None
@@ -74,17 +81,22 @@ def react(drone, actual, desired):
     if actual == None:
         log()
         return
+
+    global PREV_ERROR
     
     error = actual - desired
+    delta_error = PREV_ERROR - error
 
     fb = 'forward' if error.y > 0 else 'backward'
     rl = 'right' if error.y > 0 else 'left'
 
-    speed_x = int(round(abs(min(error.x * kP_x, MAX_x))))
-    speed_y = int(round(abs(min(error.y * kP_y, MAX_y))))
+    speed_x = int(round(abs(min((error.x * kP_x) + (delta_error.x * kD_x), MAX_x))))
+    speed_y = int(round(abs(min(error.y * kP_y + (delta_error.y * kD_y), MAX_y))))
 
     drone.move(fb, speed_y)
     drone.move(rl, speed_x)
+
+    PREV_ERROR = error
 
     log(actual, Point(speed_x, speed_y), fb, rl)
     
@@ -116,9 +128,9 @@ def log(actual=None, speed=None, direction_y=None, direction_x=None):
     #speed_data = ' Fwd/Right: {:3} {:3}'.format(speed.x, speed.y) if speed else ''
     speed_data = ' ' + direction_y + ': {:3} '.format(speed.y) + direction_x + ': {:3}'.format(speed.x) if speed else ''
 
-    #LOG_FILE.write(time_data + speed_data + position_data + '\n')
-    LOG_FILE.write(time_data + speed_data + '\n')
-    print(time_data + speed_data) #+ position_data)
+    LOG_FILE.write(time_data + speed_data + position_data + '\n')
+    #LOG_FILE.write(time_data + speed_data + '\n')
+    #print(time_data + speed_data + position_data)
 
 def run_from_input(drone):
     while True:
