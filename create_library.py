@@ -25,7 +25,7 @@ def make_function_for_command(command):
     # then names of its parameters (if any).
     # Standardize command-names to lower-case:
     command_name = command[0].lower()
-    opcode = command[1]
+    opcode = int(command[1])
 
     # Add the command's name (e.g. 'start') to the list
     # of global values.  Associate a function with the name
@@ -76,8 +76,9 @@ def run_command(command_name, opcode, *args):
         return get_sensor_packet(args[0])
 
 def send_byte(byte):
-    print('To Arduino: ', '{:3}'.format(byte))
-#     SERIAL_CONNECTION.write(bytearray([byte]))
+    print 'To Arduino: {:3}'.format(byte)
+    time.sleep(1)
+    SERIAL_CONNECTION.write(bytearray([chr(byte)]))
 
 def get_sensor_packet(packet_number):
     # Not yet implemented
@@ -92,15 +93,21 @@ def high_low_bytes(two_byte_number):
 # For testing
 def main():
     make_functions_for_the_create_robot()
+    connect_to_arduino()
+    time.sleep(3)
     start()
-    time.sleep(1)
-    song([35, 64], [80, 16], [30, 32], [50, 32])
-    time.sleep(2)
-    demo(8)
-    time.sleep(2)
+#    demo(9)
+#    time.sleep(10)
+#    print('demo 8')
+#    demo(8)
+#    time.sleep(10)
+   # song([35, 64], [80, 16], [30, 32], [50, 32])
+    #time.sleep(2)
+    #time.sleep(2)
+    #time.sleep(3.0)
     full()
     drive_direct(50, -50)
-
+    #SERIAL_CONNECTION.write(bytearray([chr(0), chr(50), chr(0), chr(50)]))
 
 main()
 
