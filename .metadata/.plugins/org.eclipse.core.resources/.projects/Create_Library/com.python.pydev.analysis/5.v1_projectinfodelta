@@ -1,0 +1,16 @@
+INSTUPcreate_library
+/Users/david/Documents/KIPR-aerial-2016/Create_Library/src/create_library.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0&&3|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0&&2|10|2|0&&2|11|2|0&&2|12|2|0&&2|13|2|0
+create_library=2
+main=13
+send_byte=10
+SERIAL_CONNECTION=5
+run_command=9
+COMMANDS=1
+DEV=3
+connect_to_arduino=6
+high_low_bytes=12
+BAUD_RATE=4
+make_function_for_command=8
+make_functions_for_the_create_robot=7
+get_sensor_packet=11

@@ -1,0 +1,2 @@
+org.eclipse.cdt.core.taskPriorities=high,low,low,normal,normal,low
+org.eclipse.cdt.core.taskTags=TODO,FIXME,CONSIDER,HELP\:,GRADER\:,XXX

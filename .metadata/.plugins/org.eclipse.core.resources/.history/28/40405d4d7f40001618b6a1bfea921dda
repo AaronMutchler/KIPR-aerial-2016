@@ -93,12 +93,11 @@ def high_low_bytes(two_byte_number):
 def main():
     make_functions_for_the_create_robot()
     start()
-    time.sleep(1)
-    song([35, 64], [80, 16], [30, 32], [50, 32])
-    time.sleep(2)
-    demo(8)
+    song([80, 16], [45, 64])
     time.sleep(2)
     full()
+    left_hi, left_lo = high_low_bytes(50)
+    right_hi, right_lo = high_low_bytes(50)
     drive_direct(50, -50)
 
 

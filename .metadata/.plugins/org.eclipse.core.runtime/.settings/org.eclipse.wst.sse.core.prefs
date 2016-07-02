@@ -1,0 +1,3 @@
+task-tags/enabled=true
+task-tags/taskPriorities=2,0,0,1,1,0
+task-tags/taskTags=TODO,FIXME,CONSIDER,HELP,GRADER,XXX

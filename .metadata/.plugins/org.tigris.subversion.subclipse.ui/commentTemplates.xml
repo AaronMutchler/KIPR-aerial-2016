@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommitCommentTemplates>	<CommitComment>Done.</CommitComment>
+	<CommitComment>Initial version.</CommitComment>
+	<CommitComment>NOTE:  Some of the files in this commit contain comments from a grader.</CommitComment>
+	<CommitComment>Partially done.</CommitComment>
+	<CommitComment>WARNING:  Some of the files in this commit contain known errors!</CommitComment>
+</CommitCommentTemplates>
