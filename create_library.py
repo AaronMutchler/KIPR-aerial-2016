@@ -109,5 +109,4 @@ def main():
     drive_direct(50, -50)
     #SERIAL_CONNECTION.write(bytearray([chr(0), chr(50), chr(0), chr(50)]))
 
-main()
 

@@ -1,493 +1,100 @@
- 1.24
- 1.26
- 1.28
- 1.30
- 1.32
- 1.34
- 1.36
- 1.38
- 1.40
- 1.43
- 1.45
- 1.47
- 1.49
- 1.51
- 1.53
- 1.55
- 1.57
- 1.59
- 1.61
- 1.63
- 1.65
- 1.67
- 1.69
- 1.71
- 1.73
- 1.75
- 1.77
- 1.79
- 1.81
- 1.83
- 1.85
- 1.87
- 1.89
- 1.91
- 1.93
- 1.95
- 1.97
- 1.99
- 2.01
- 2.03
- 2.05
- 2.07
- 2.09
- 2.11
- 2.13
- 2.15
- 2.17
- 2.19
- 2.21
- 2.23
- 2.25
- 2.27
- 2.29
- 2.31
- 2.33
- 2.35
- 2.37
- 2.39
- 2.41
- 2.43
- 2.45
- 2.48
- 2.50
- 2.52
- 2.54
- 2.56
- 2.58
- 2.60
- 2.62
- 2.64
- 2.66
- 2.68
- 2.70
- 2.72
- 2.74
- 2.76
- 2.78
- 2.80
- 2.82
- 2.84
- 2.86
- 2.88
- 2.90
- 2.93
- 2.95
- 2.97
- 2.99
- 3.01
- 3.03
- 3.05
- 3.07
- 3.09
- 3.11
- 3.13
- 3.15
- 3.17
- 3.19
- 3.21
- 3.23
- 3.25
- 3.27
- 3.29
- 3.31
- 3.33
- 3.35
- 3.37
- 3.39
- 3.41
- 3.43
- 3.45
- 3.47
- 3.49
- 3.51
- 3.53
- 3.55
- 3.57
- 3.59
- 3.61
- 3.64
- 3.66
- 3.68
- 3.70
- 3.72
- 3.74
- 3.76
- 3.78
- 3.80
- 3.82
- 3.84
- 3.86
- 3.88
- 3.90
- 3.92
- 3.94
- 3.96
- 3.98
- 4.00
- 4.02
- 4.04
- 4.06
- 4.08
- 4.10
- 4.12
- 4.14
- 4.16
- 4.18
- 4.20
- 4.22
- 4.24
- 4.26
- 4.28
- 4.30
- 4.32
- 4.34
- 4.37
- 4.39
- 4.41
- 4.43
- 4.45
- 4.47
- 4.49
- 4.51
- 4.53
- 4.55
- 4.57
- 4.59
- 4.61
- 4.63
- 4.65
- 4.67
- 4.69
- 4.71
- 4.73
- 4.75
- 4.77
- 4.79
- 4.81
- 4.83
- 4.85
- 4.87
- 4.89
- 4.91
- 4.93
- 4.95
- 4.97
- 5.00
- 5.02
- 5.04
- 5.06
- 5.08
- 5.10
- 5.12
- 5.14
- 5.16
- 5.18
- 5.20
- 5.22
- 5.24
- 5.26
- 5.28
- 5.30
- 5.32
- 5.34
- 5.36
- 5.38
- 5.40
- 5.42
- 5.44
- 5.46
- 5.48
- 5.50
- 5.52
- 5.54
- 5.56
- 5.58
- 5.60
- 5.62
- 5.65
- 5.67
- 5.69
- 5.71
- 5.73
- 5.75
- 5.77
- 5.79
- 5.81
- 5.83
- 5.85
- 5.87
- 5.89
- 5.91
- 5.93
- 5.95
- 5.97
- 5.99
- 6.01
- 6.03
- 6.05
- 6.07
- 6.09
- 6.11
- 6.13
- 6.15
- 6.17
- 6.19
- 6.21
- 6.23
- 6.25
- 6.27
- 6.29
- 6.31
- 6.33
- 6.35
- 6.37
- 6.39
- 6.41
- 6.44
- 6.46
- 6.48
- 6.50
- 6.52
- 6.54
- 6.56
- 6.58
- 6.60
- 6.62
- 6.64
- 6.66
- 6.68
- 6.70
- 6.72
- 6.74
- 6.76
- 6.78
- 6.80
- 6.82
- 6.84
- 6.86
- 6.88
- 6.90
- 6.92
- 6.94
- 6.96
- 6.98
- 7.00
- 7.02
- 7.04
- 7.06
- 7.08
- 7.10
- 7.12
- 7.14
- 7.16
- 7.18
- 7.20
- 7.22
- 7.24
- 7.27
- 7.29
- 7.31
- 7.33
- 7.35
- 7.37
- 7.39
- 7.41
- 7.43
- 7.45
- 7.47
- 7.49
- 7.51
- 7.53
- 7.55
- 7.57
- 7.59
- 7.61
- 7.63
- 7.65
- 7.67
- 7.69
- 7.71
- 7.73
- 7.75
- 7.77
- 7.79
- 7.81
- 7.83
- 7.85
- 7.87
- 7.89
- 7.91
- 7.93
- 7.95
- 7.97
- 7.99
- 8.01
- 8.03
- 8.05
- 8.08
- 8.10
- 8.12
- 8.14
- 8.16
- 8.18
- 8.20
- 8.22
- 8.24
- 8.26
- 8.28
- 8.30
- 8.32
- 8.34
- 8.36
- 8.38
- 8.40
- 8.42
- 8.44
- 8.46
- 8.48
- 8.50
- 8.52
- 8.54
- 8.56
- 8.58
- 8.60
- 8.62
- 8.64
- 8.66
- 8.68
- 8.70
- 8.72
- 8.74
- 8.76
- 8.78
- 8.80
- 8.82
- 8.84
- 8.86
- 8.88
- 8.90
- 8.93
- 8.95
- 8.97
- 8.99
- 9.01
- 9.03
- 9.05
- 9.07
- 9.09
- 9.11
- 9.13
- 9.15
- 9.17
- 9.19
- 9.21
- 9.23
- 9.25
- 9.27
- 9.29
- 9.31
- 9.33
- 9.35
- 9.37
- 9.39
- 9.41
- 9.43
- 9.45
- 9.47
- 9.49
- 9.51
+ 9.22
+ 9.24
+ 9.26
+ 9.28
+ 9.30
+ 9.32
+ 9.34
+ 9.36
+ 9.38
+ 9.40
+ 9.42
+ 9.44
+ 9.46
+ 9.48
+ 9.50
  9.53
  9.55
  9.57
  9.59
  9.61
  9.63
- 9.66
- 9.68
- 9.70
- 9.72
- 9.74
- 9.76
- 9.78
- 9.80
- 9.82
- 9.84
- 9.86
- 9.88
- 9.90
- 9.92
- 9.94
- 9.96
- 9.98
-10.00
-10.02
-10.04
-10.06
-10.08
-10.10
-10.12
-10.14
-10.16
-10.18
-10.20
-10.22
-10.24
-10.26
-10.28
-10.30
-10.32
-10.34
-10.36
-10.38
-10.40
-10.42
+ 9.65
+ 9.67
+ 9.69
+ 9.71
+ 9.73
+ 9.75
+ 9.77
+ 9.79
+ 9.81
+ 9.83
+ 9.85
+ 9.87
+ 9.89
+ 9.91
+ 9.93
+ 9.95
+ 9.97
+ 9.99
+10.01
+10.03
+10.05
+10.07
+10.09
+10.11
+10.13
+10.15
+10.17
+10.19
+10.21
+10.23
+10.25
+10.27
+10.29
+10.31
+10.33
+10.35
+10.37
+10.39
+10.41
+10.43
 10.45
 10.47
 10.49
 10.51
 10.53
 10.55
-10.57
-10.59
-10.61
-10.63
-10.65
-10.67
-10.69
-10.71
-10.73
-10.75
-10.77
-10.79
-10.81
-10.83
-10.85
-10.87
-10.89
-10.91
-10.93
-10.95
-10.97
-10.99
-11.01
-11.03
-11.05
-11.07
-11.09
-11.11
-11.13
-11.15
+10.58
+10.60
+10.62
+10.64
+10.66
+10.68
+10.70
+10.72
+10.74
+10.76
+10.78
+10.80
+10.82
+10.84
+10.86
+10.88
+10.90
+10.92
+10.94
+10.96
+10.98
+11.00
+11.02
+11.04
+11.06
+11.08
+11.10
+11.12
+11.14
+11.16
 11.18
 11.20
 11.22
@@ -505,487 +112,1606 @@
 11.46
 11.48
 11.50
-11.52
-11.54
-11.56
-11.58
-11.60
-11.62
-11.64
-11.66
-11.68
-11.70
-11.74 backward:   0 left:   0 X/Y: 236   1
-11.78 backward:  11 left:   5 X/Y: 224   3
-11.83 backward:  10 left:   4 X/Y: 221   3
-11.87 backward:  10 left:   4 X/Y: 219   6
-11.91 backward:  10 left:   4 X/Y: 217   8
-11.95 backward:  10 left:   4 X/Y: 214   8
-11.99 backward:  10 left:   3 X/Y: 212  11
-12.03 backward:  10 left:   3 X/Y: 209  12
-12.07 backward:   9 left:   3 X/Y: 207  14
-12.12 backward:   9 left:   3 X/Y: 205  12
-12.16 backward:   9 left:   3 X/Y: 204  14
-12.20 backward:   9 left:   3 X/Y: 200  15
-12.24 backward:   9 left:   3 X/Y: 197  24
-12.28 backward:   8 left:   2 X/Y: 197  18
-12.32 backward:   9 left:   2 X/Y: 195  25
-12.37 backward:   8 left:   2 X/Y: 193  22
-12.41 backward:   8 left:   2 X/Y: 193   9
-12.45 backward:  10 left:   2 X/Y: 192  11
-12.49 backward:  10 left:   2 X/Y: 190  15
-12.53 backward:   9 left:   2 X/Y: 188  21
-12.57 backward:   8 left:   2 X/Y: 187  23
-12.61 backward:   8 left:   2 X/Y: 184  40
-12.66 backward:   6 left:   2 X/Y: 184  45
-12.70 backward:   6 left:   2 X/Y: 182  36
-12.74 backward:   7 left:   1 X/Y: 180  42
-12.78 backward:   6 left:   1 X/Y: 178  47
-12.82 backward:   6 left:   1 X/Y: 177  52
-12.86 backward:   5 left:   1 X/Y: 175  56
-12.91 backward:   5 left:   1 X/Y: 175  62
-12.95 backward:   4 left:   1 X/Y: 173  66
-12.99 backward:   4 left:   1 X/Y: 171  72
-13.03 backward:   3 left:   1 X/Y: 172  78
-13.07 backward:   2 left:   1 X/Y: 170  83
-13.11 forward:   2 right:   1 X/Y: 158 121
-13.15 forward:   2 right:   0 X/Y: 156 126
-13.20 forward:   3 right:   0 X/Y: 155 131
-13.24 forward:   3 right:   0 X/Y: 153 135
-13.28 forward:   4 right:   0 X/Y: 150 140
-13.32 forward:   4 right:   1 X/Y: 149 143
-13.36 forward:   5 right:   1 X/Y: 149 147
-13.40 forward:   5 right:   1 X/Y: 148 152
-13.44 forward:   6 right:   1 X/Y: 151 129
-13.49 forward:   3 right:   1 X/Y: 150 144
-13.53 forward:   5 right:   1 X/Y: 147 150
-13.57 forward:   5 right:   1 X/Y: 147 153
-13.61 forward:   6 right:   1 X/Y: 145 155
-13.65 forward:   6 right:   1 X/Y: 144 146
-13.69 forward:   5 right:   1 X/Y: 144 160
-13.74 forward:   6 right:   1 X/Y: 144 151
-13.78 forward:   5 right:   1 X/Y: 142 153
-13.82 forward:   6 right:   1 X/Y: 142 167
-13.86 forward:   7 right:   1 X/Y: 141 168
-13.90 forward:   7 right:   1 X/Y: 141 171
-13.94 forward:   8 right:   1 X/Y: 139 172
-13.99 forward:   8 right:   1 X/Y: 138 173
-14.03 forward:   8 right:   1 X/Y: 138 174
-14.07 forward:   8 right:   1 X/Y: 138 177
-14.11 forward:   8 right:   1 X/Y: 137 177
-14.15 forward:   8 right:   1 X/Y: 136 179
-14.19 forward:   8 right:   2 X/Y: 137 171
-14.24 forward:   8 right:   1 X/Y: 136 181
-14.28 forward:   9 right:   2 X/Y: 136 182
-14.32 forward:   9 right:   2 X/Y: 135 183
-14.36 forward:   9 right:   2 X/Y: 136 177
-14.40 forward:   8 right:   2 X/Y: 136 184
-14.44 forward:   9 right:   2 X/Y: 136 184
-14.49 forward:   9 right:   2 X/Y: 136 185
-14.53 forward:   9 right:   2 X/Y: 136 185
-14.57 forward:   9 right:   2 X/Y: 136 185
-14.61 forward:   9 right:   2 X/Y: 135 186
-14.65 forward:   9 right:   2 X/Y: 136 183
-14.69 forward:   9 right:   2 X/Y: 136 183
-14.73 forward:   9 right:   2 X/Y: 135 184
-14.78 forward:   9 right:   2 X/Y: 134 185
-14.82 forward:   9 right:   2 X/Y: 134 185
-14.86 forward:   9 right:   2 X/Y: 134 186
-14.90 forward:   9 right:   2 X/Y: 133 185
-14.94 forward:   9 right:   2 X/Y: 133 185
-14.98 forward:   9 right:   2 X/Y: 132 185
-15.02 forward:   9 right:   2 X/Y: 132 184
-15.07 forward:   9 right:   2 X/Y: 131 185
-15.11 forward:   9 right:   2 X/Y: 131 184
-15.15 forward:   9 right:   2 X/Y: 130 183
-15.19 forward:   9 right:   2 X/Y: 129 182
-15.23 forward:   9 right:   2 X/Y: 128 182
-15.27 forward:   9 right:   2 X/Y: 128 186
-15.32 forward:   9 right:   2 X/Y: 128 185
-15.36 forward:   9 right:   2 X/Y: 126 184
-15.40 forward:   9 right:   2 X/Y: 124 183
-15.44 forward:   9 right:   2 X/Y: 124 182
-15.48 forward:   9 right:   2 X/Y: 123 181
-15.52 forward:   9 right:   2 X/Y: 123 181
-15.56 forward:   9 right:   2 X/Y: 122 171
-15.60 forward:   8 right:   2 X/Y: 120 179
-15.65 forward:   8 right:   3 X/Y: 119 178
-15.69 forward:   8 right:   3 X/Y: 118 176
-15.73 forward:   8 right:   3 X/Y: 117 174
-15.77 forward:   8 right:   3 X/Y: 115 172
-15.81 forward:   8 right:   3 X/Y: 114 169
-15.85 forward:   7 right:   3 X/Y: 114 166
-15.89 forward:   7 right:   3 X/Y: 112 163
-15.94 forward:   7 right:   3 X/Y: 110 160
-15.98 forward:   6 right:   3 X/Y: 108 144
-16.02 forward:   5 right:   3 X/Y: 105 140
-16.06 forward:   4 right:   3 X/Y: 104 136
-16.10 forward:   4 right:   4 X/Y: 103 132
-16.14 forward:   3 right:   4 X/Y: 100 127
-16.18 forward:   3 right:   4 X/Y:  96 152
-16.22 forward:   6 right:   4 X/Y:  93 148
-16.27 forward:   5 right:   4 X/Y:  91 146
-16.31 forward:   5 right:   4 X/Y:  90 141
-16.35 forward:   4 right:   4 X/Y:  87 137
-16.39 forward:   4 right:   5 X/Y:  85 132
-16.43 forward:   3 right:   5 X/Y:  81 129
-16.48 backward:   3 left:   5 X/Y:  82  92
-16.52 forward:   1 right:   5 X/Y:  77 119
-16.56 forward:   2 right:   5 X/Y:  74 114
-16.60 forward:   2 right:   5 X/Y:  71 110
-16.64 forward:   1 right:   6 X/Y:  69 106
-16.68 backward:   1 left:   6 X/Y:  71  68
-16.72 backward:   3 left:   6 X/Y:  68  63
-16.77 backward:   4 left:   6 X/Y:  66  58
-16.81 backward:   5 left:   6 X/Y:  64  54
-16.85 backward:   5 left:   6 X/Y:  62  51
-16.89 backward:   5 left:   6 X/Y:  60  46
-16.93 backward:   6 left:   6 X/Y:  57  43
-16.97 backward:   6 left:   6 X/Y:  56  37
-17.01 backward:   7 left:   7 X/Y:  54  34
-17.06 backward:   7 left:   7 X/Y:  53  29
-17.10 backward:   8 left:   7 X/Y:  51  25
-17.14 backward:   8 left:   7 X/Y:  50  22
-17.18 backward:   8 left:   7 X/Y:  46  32
-17.22 backward:   7 left:   7 X/Y:  47  17
-17.26 backward:   9 left:   7 X/Y:  46  13
-17.30 backward:   9 left:   7 X/Y:  45  10
-17.35 backward:  10 left:   7 X/Y:  45   9
-17.39 backward:  10 left:   7 X/Y:  36  33
-17.43 backward:   7 left:   8 X/Y:  36  31
-17.47 backward:   7 left:   8 X/Y:  35  28
-17.51 backward:   8 left:   8 X/Y:  34  16
-17.55 backward:   9 left:   8 X/Y:  34  24
-17.60 backward:   8 left:   8 X/Y:  32  21
-17.64 backward:   8 left:   8 X/Y:  33  18
-17.68 backward:   9 left:   8 X/Y:  32  17
-17.72 backward:   9 left:   8 X/Y:  32  16
-17.76 backward:   9 left:   8 X/Y:  32  15
-17.80 backward:   9 left:   8 X/Y:  31  14
-17.85 backward:   9 left:   8 X/Y:  31  13
-17.89 backward:   9 left:   8 X/Y:  30  13
-17.93 backward:   9 left:   8 X/Y:  30  10
-17.97 backward:  10 left:   8 X/Y:  31  11
-18.01 backward:  10 left:   8 X/Y:  32  10
-18.05 backward:  10 left:   8 X/Y:  31  11
-18.09 backward:  10 left:   8 X/Y:  31   9
-18.13 backward:  10 left:   8 X/Y:  33   9
-18.18 backward:  10 left:   8 X/Y:  34  10
-18.22 backward:  10 left:   8 X/Y:  33  10
-18.26 backward:  10 left:   8 X/Y:  36  10
-18.30 backward:  10 left:   8 X/Y:  35  11
-18.34 backward:  10 left:   8 X/Y:  37  12
-18.38 backward:   9 left:   8 X/Y:  37  13
-18.43 backward:   9 left:   8 X/Y:  37  15
-18.47 backward:   9 left:   8 X/Y:  39  16
-18.51 backward:   9 left:   8 X/Y:  41  17
-18.55 backward:   9 left:   7 X/Y:  43  19
-18.59 backward:   9 left:   7 X/Y:  44  22
-18.63 backward:   8 left:   7 X/Y:  46  25
-18.67 backward:   8 left:   7 X/Y:  48  26
-18.72 backward:   8 left:   7 X/Y:  49  29
-18.76 backward:   8 left:   7 X/Y:  51  33
-18.80 backward:   7 left:   7 X/Y:  53  36
-18.84 backward:   7 left:   7 X/Y:  63  10
-18.89 backward:  10 left:   6 X/Y:  65  12
-18.93 backward:   9 left:   6 X/Y:  68  16
-18.97 backward:   9 left:   6 X/Y:  69  20
-19.02 backward:   9 left:   6 X/Y:  71  24
-19.06 backward:   8 left:   6 X/Y:  75  29
-19.10 backward:   8 left:   5 X/Y:  78  35
-19.15 backward:   7 left:   5 X/Y:  81  38
-19.19 backward:   7 left:   5 X/Y:  84  43
-19.23 backward:   6 left:   5 X/Y:  87  46
-19.28 backward:   6 left:   5 X/Y:  91  52
-19.32 backward:   5 left:   4 X/Y:  93  58
-19.36 backward:   5 left:   4 X/Y:  95  64
-19.40 forward:   4 right:   4 X/Y:  95 112
-19.44 backward:   1 left:   4 X/Y: 103  82
-19.49 backward:   2 left:   4 X/Y: 107  89
-19.53 forward:   1 right:   3 X/Y: 106 133
-19.57 forward:   4 right:   3 X/Y: 112 139
-19.61 forward:   4 right:   3 X/Y: 116 145
-19.65 forward:   5 right:   3 X/Y: 119 150
-19.69 forward:   5 right:   3 X/Y: 123 156
-19.74 forward:   6 right:   2 X/Y: 132 132
-19.78 forward:   3 right:   2 X/Y: 136 137
-19.82 forward:   4 right:   2 X/Y: 138 142
-19.86 forward:   5 right:   1 X/Y: 142 146
-19.90 forward:   5 right:   1 X/Y: 144 151
-19.94 forward:   5 right:   1 X/Y: 146 154
-19.98 forward:   6 right:   1 X/Y: 149 158
-20.02 forward:   6 right:   1 X/Y: 151 162
-20.07 forward:   7 right:   1 X/Y: 153 166
-20.11 forward:   7 right:   0 X/Y: 154 179
-20.15 forward:   8 right:   0 X/Y: 156 180
-20.19 forward:   9 right:   0 X/Y: 158 174
-20.24 forward:   8 right:   0 X/Y: 160 183
-20.28 forward:   9 right:   0 X/Y: 161 180
-20.32 forward:   9 right:   0 X/Y: 162 184
-20.36 forward:   9 right:   0 X/Y: 164 186
-20.41 forward:   9 right:   0 X/Y: 166 189
-20.45 forward:  10 right:   0 X/Y: 166 190
-20.49 forward:  10 right:   0 X/Y: 169 191
-20.53 forward:  10 right:   1 X/Y: 169 192
-20.57 forward:  10 right:   1 X/Y: 170 192
-20.61 forward:  10 right:   1 X/Y: 172 194
-20.65 forward:  10 right:   1 X/Y: 173 194
-20.70 forward:  10 right:   1 X/Y: 176 195
-20.74 forward:  10 right:   1 X/Y: 177 196
-20.78 forward:  10 right:   1 X/Y: 178 196
-20.82 forward:  10 right:   1 X/Y: 180 196
-20.86 forward:  10 right:   1 X/Y: 181 197
-20.90 forward:  10 right:   1 X/Y: 179 197
-20.94 forward:  10 right:   1 X/Y: 181 197
-20.99 forward:  10 right:   1 X/Y: 184 197
-21.03 forward:  10 right:   2 X/Y: 180 197
-21.07 forward:  10 right:   1 X/Y: 186 197
-21.11 forward:  10 right:   2 X/Y: 186 197
-21.15 forward:  10 right:   2 X/Y: 184 198
-21.19 forward:  11 right:   2 X/Y: 192 197
-21.24 forward:  10 right:   2 X/Y: 189 197
-21.28 forward:  10 right:   2 X/Y: 194 196
-21.32 forward:  10 right:   2 X/Y: 194 196
-21.36 forward:  10 right:   2 X/Y: 195 196
-21.40 forward:  10 right:   2 X/Y: 196 195
-21.44 forward:  10 right:   2 X/Y: 196 194
-21.48 forward:  10 right:   2 X/Y: 200 194
-21.53 forward:  10 right:   3 X/Y: 200 194
-21.57 forward:  10 right:   3 X/Y: 203 193
-21.61 forward:  10 right:   3 X/Y: 204 192
-21.65 forward:  10 right:   3 X/Y: 205 192
-21.69 forward:  10 right:   3 X/Y: 208 191
-21.73 forward:  10 right:   3 X/Y: 209 190
-21.78 forward:  10 right:   3 X/Y: 212 189
-21.82 forward:  10 right:   3 X/Y: 213 188
-21.86 forward:   9 right:   3 X/Y: 215 188
-21.90 forward:   9 right:   3 X/Y: 217 184
-21.94 forward:   9 right:   4 X/Y: 219 183
-21.98 forward:   9 right:   4 X/Y: 221 180
-22.03 forward:   9 right:   4 X/Y: 222 178
-22.07 forward:   8 right:   4 X/Y: 224 174
-22.11 forward:   8 right:   4 X/Y: 226 172
-22.15 forward:   8 right:   4 X/Y: 227 168
-22.19 forward:   7 right:   4 X/Y: 230 165
-22.23 forward:   7 right:   4 X/Y: 231 160
-22.27 forward:   6 right:   4 X/Y: 233 157
-22.32 forward:   6 right:   5 X/Y: 234 151
-22.36 forward:   5 right:   5 X/Y: 237 149
-22.40 forward:   5 right:   5 X/Y: 237 145
-22.44 forward:   5 right:   5 X/Y: 239 140
-22.48 forward:   4 right:   5 X/Y: 241 135
-22.52 forward:   4 right:   5 X/Y: 242 130
-22.57 forward:   3 right:   5 X/Y: 243 124
-22.61 forward:   3 right:   5 X/Y: 243 119
-22.65 forward:   2 right:   5 X/Y: 245 112
-22.69 forward:   1 right:   5 X/Y: 245 108
-22.73 backward:   1 left:   5 X/Y: 245 100
-22.77 backward:   0 left:   5 X/Y: 245  93
-22.82 backward:   1 left:   5 X/Y: 244  87
-22.86 backward:   1 left:   5 X/Y: 244  81
-22.90 forward:   2 right:   5 X/Y: 240 112
-22.94 forward:   1 right:   5 X/Y: 239 107
-22.98 backward:   1 left:   5 X/Y: 241  59
-23.02 backward:   4 left:   5 X/Y: 240  54
-23.07 backward:   5 left:   5 X/Y: 238  48
-23.11 backward:   6 left:   5 X/Y: 237  43
-23.15 backward:   6 left:   5 X/Y: 236  40
-23.19 backward:   6 left:   5 X/Y: 236  33
-23.23 backward:   7 left:   5 X/Y: 234  30
-23.27 backward:   8 left:   5 X/Y: 233  25
-23.31 backward:   8 left:   5 X/Y: 231  21
-23.35 backward:   8 left:   4 X/Y: 230  32
-23.40 backward:   7 left:   4 X/Y: 230  13
-23.44 backward:   9 left:   4 X/Y: 229  26
-23.48 backward:   8 left:   4 X/Y: 229  25
-23.52 backward:   8 left:   4 X/Y: 228  36
-23.56 backward:   7 left:   4 X/Y: 227  22
-23.60 backward:   8 left:   4 X/Y: 227  19
-23.65 backward:   9 left:   4 X/Y: 228  19
-23.69 backward:   9 left:   4 X/Y: 227  18
-23.73 backward:   9 left:   4 X/Y: 228  17
-23.77 backward:   9 left:   4 X/Y: 228  16
-23.81 backward:   9 left:   4 X/Y: 229  15
-23.85 backward:   9 left:   4 X/Y: 229  17
-23.89 backward:   9 left:   4 X/Y: 230  16
-23.94 backward:   9 left:   4 X/Y: 230  14
-23.98 backward:   9 left:   4 X/Y: 231  13
-24.02 backward:   9 left:   4 X/Y: 232  14
-24.06 backward:   9 left:   5 X/Y: 232  11
-24.10 backward:  10 left:   5 X/Y: 233  11
-24.14 backward:  10 left:   5 X/Y: 234  10
-24.19 backward:  10 left:   5 X/Y: 235  11
-24.23 backward:  10 left:   5 X/Y: 236  10
-24.27 backward:  10 left:   5 X/Y: 237  10
-24.31 backward:  10 left:   5 X/Y: 238  10
-24.35 backward:  10 left:   5 X/Y: 238   9
-24.39 backward:  10 left:   5 X/Y: 240  10
-24.43 backward:  10 left:   5 X/Y: 241  10
-24.48 backward:  10 left:   5 X/Y: 243  11
-24.52 backward:  10 left:   5 X/Y: 243  11
-24.56 backward:  10 left:   5 X/Y: 245  12
-24.60 backward:   9 left:   5 X/Y: 246  12
-24.64 backward:   9 left:   5 X/Y: 248  15
-24.68 backward:   9 left:   6 X/Y: 249  16
-24.73 backward:   9 left:   6 X/Y: 250  18
-24.77 backward:   9 left:   6 X/Y: 252  15
-24.81 backward:   9 left:   6 X/Y: 253  17
-24.85 backward:   9 left:   6 X/Y: 255  19
-24.89 backward:   9 left:   6 X/Y: 255  18
-24.93 backward:   9 left:   6 X/Y: 256  19
-24.98 backward:   9 left:   6 X/Y: 257  21
-25.02 backward:   8 left:   6 X/Y: 259  23
-25.06 backward:   8 left:   6 X/Y: 258  26
-25.10 backward:   8 left:   6 X/Y: 259  15
-25.14 backward:   9 left:   6 X/Y: 261  18
-25.18 backward:   9 left:   6 X/Y: 262  34
-25.22 backward:   7 left:   6 X/Y: 264  25
-25.27 backward:   8 left:   7 X/Y: 265  29
-25.31 backward:   8 left:   7 X/Y: 266  44
-25.35 backward:   6 left:   7 X/Y: 268  37
-25.39 backward:   7 left:   7 X/Y: 269  47
-25.43 backward:   6 left:   7 X/Y: 271  45
-25.47 backward:   6 left:   7 X/Y: 273  49
-25.51 backward:   5 left:   7 X/Y: 274  55
-25.56 backward:   5 left:   7 X/Y: 277  58
-25.60 backward:   5 left:   7 X/Y: 279  61
-25.64 backward:   4 left:   7 X/Y: 281  66
-25.68 backward:   4 left:   8 X/Y: 282  71
-25.72 forward:   3 right:   8 X/Y: 282 111
-25.76 backward:   1 left:   8 X/Y: 287  82
-25.81 forward:   2 right:   8 X/Y: 285 119
-25.85 backward:   2 left:   8 X/Y: 290  92
-25.89 backward:   1 left:   8 X/Y: 292  97
-25.93 forward:   0 right:   8 X/Y: 293 103
-25.97 forward:   0 right:   8 X/Y: 289 136
-26.01 forward:   4 right:   8 X/Y: 295 110
-26.05 forward:   1 right:   8 X/Y: 290 143
-26.10 forward:   5 right:   8 X/Y: 296 118
-26.14 forward:   2 right:   9 X/Y: 298 122
-26.18 forward:   2 right:   9 X/Y: 298 125
-26.22 forward:   3 right:   9 X/Y: 299 128
-26.26 forward:   3 right:   9 X/Y: 299 131
-26.31 forward:   3 right:   9 X/Y: 300 133
-26.35 forward:   4 right:   9 X/Y: 300 136
-26.39 forward:   4 right:   9 X/Y: 301 138
-26.44 forward:   4 right:   9 X/Y: 300 140
-26.48 forward:   4 right:   9 X/Y: 300 144
-26.52 forward:   5 right:   9 X/Y: 300 146
-26.57 forward:   5 right:   9 X/Y: 298 147
-26.61 forward:   5 right:   9 X/Y: 298 149
-26.66 forward:   5 right:   9 X/Y: 292 175
-26.70 forward:   8 right:   8 X/Y: 298 152
-26.74 forward:   6 right:   9 X/Y: 298 165
-26.79 forward:   7 right:   9 X/Y: 297 155
-26.83 forward:   6 right:   9 X/Y: 297 156
-26.87 forward:   6 right:   9 X/Y: 297 157
-26.91 forward:   6 right:   9 X/Y: 296 158
-26.96 forward:   6 right:   9 X/Y: 296 158
-27.00 forward:   6 right:   9 X/Y: 294 169
-27.04 forward:   7 right:   8 X/Y: 294 159
-27.08 forward:   6 right:   8 X/Y: 287 171
-27.12 forward:   8 right:   8 X/Y: 293 160
-27.16 forward:   6 right:   8 X/Y: 286 183
-27.20 forward:   9 right:   8 X/Y: 291 160
-27.25 forward:   6 right:   8 X/Y: 291 172
-27.29 forward:   8 right:   8 X/Y: 284 172
-27.33 forward:   8 right:   8 X/Y: 290 172
-27.37 forward:   8 right:   8 X/Y: 283 172
-27.41 forward:   8 right:   8 X/Y: 289 161
-27.45 forward:   7 right:   8 X/Y: 287 162
-27.49 forward:   7 right:   8 X/Y: 288 162
-27.53 forward:   7 right:   8 X/Y: 286 162
-27.58 forward:   7 right:   8 X/Y: 286 172
-27.62 forward:   8 right:   8 X/Y: 285 161
-27.66 forward:   7 right:   8 X/Y: 282 176
-27.70 forward:   8 right:   8 X/Y: 285 172
-27.74 forward:   8 right:   8 X/Y: 281 175
-27.78 forward:   8 right:   8 X/Y: 284 161
-27.82 forward:   7 right:   8 X/Y: 283 159
-27.87 forward:   6 right:   8 X/Y: 282 159
-27.91 forward:   6 right:   8 X/Y: 282 157
-27.95 forward:   6 right:   8 X/Y: 281 156
-27.99 forward:   6 right:   8 X/Y: 280 156
-28.03 forward:   6 right:   8 X/Y: 279 154
-28.08 forward:   6 right:   7 X/Y: 275 161
-28.12 forward:   7 right:   7 X/Y: 276 152
-28.16 forward:   6 right:   7 X/Y: 276 151
-28.20 forward:   5 right:   7 X/Y: 275 149
-28.24 forward:   5 right:   7 X/Y: 272 146
-28.29 forward:   5 right:   7 X/Y: 271 145
-28.33 forward:   5 right:   7 X/Y: 270 155
-28.37 forward:   6 right:   7 X/Y: 260 166
-28.41 forward:   7 right:   6 X/Y: 266 139
-28.45 forward:   4 right:   7 X/Y: 265 135
-28.49 forward:   4 right:   7 X/Y: 263 133
-28.54 forward:   4 right:   6 X/Y: 254 158
-28.58 forward:   6 right:   6 X/Y: 258 128
-28.62 forward:   3 right:   6 X/Y: 256 125
-28.66 forward:   3 right:   6 X/Y: 253 122
-28.71 forward:   2 right:   6 X/Y: 251 118
-28.75 forward:   2 right:   6 X/Y: 242 143
-28.79 forward:   5 right:   5 X/Y: 245 112
-28.84 forward:   1 right:   5 X/Y: 243 108
-28.88 forward:   1 right:   5 X/Y: 235 134
-28.92 backward:   4 left:   5 X/Y: 237 100
-28.96 backward:   0 left:   5 X/Y: 234  96
-29.00 backward:   0 left:   5 X/Y: 230  93
-29.04 backward:   1 left:   4 X/Y: 227  89
-29.09 backward:   1 left:   4 X/Y: 222  85
-29.13 backward:   2 left:   4 X/Y: 217  81
-29.17 backward:   2 left:   4 X/Y: 214  77
-29.21 backward:   2 left:   3 X/Y: 208  72
-29.25 backward:   3 left:   3 X/Y: 202  68
-29.29 backward:   3 left:   3 X/Y: 198  65
-29.34 backward:   4 left:   2 X/Y: 194  61
-29.38 backward:   4 left:   2 X/Y: 190  57
-29.42 backward:   5 left:   2 X/Y: 184  54
-29.46 backward:   5 left:   2 X/Y: 180  52
-29.50 backward:   5 left:   1 X/Y: 176  48
-29.55 backward:   6 left:   1 X/Y: 171  45
-29.59 backward:   6 left:   1 X/Y: 168  43
-29.63 backward:   6 left:   1 X/Y: 164  39
-29.67 backward:   7 left:   0 X/Y: 161  36
-29.71 backward:   7 left:   0 X/Y: 157  35
-29.75 backward:   7 left:   0 X/Y: 154  33
-29.80 backward:   7 left:   0 X/Y: 149  30
-29.84 backward:   8 left:   1 X/Y: 147  28
-29.88 backward:   8 left:   1 X/Y: 144  27
-29.92 backward:   8 left:   1 X/Y: 140  26
-29.96 backward:   8 left:   1 X/Y: 137  23
-30.00 backward:   8 left:   1 X/Y: 134  22
-30.05 backward:   8 left:   2 X/Y: 132  21
-30.09 backward:   8 left:   2 X/Y: 128  19
-30.13 backward:   9 left:   2 X/Y: 125  18
-30.17 backward:   9 left:   2 X/Y: 123  17
-30.21 backward:   9 left:   2 X/Y: 121  27
-30.25 backward:   8 left:   2 X/Y: 118  14
-30.30 backward:   9 left:   3 X/Y: 116  25
-30.34 backward:   8 left:   3 X/Y: 113  13
-30.38 backward:   9 left:   3 X/Y: 110  23
-30.42 backward:   8 left:   3 X/Y: 109  22
-30.46 backward:   8 left:   3 X/Y: 106  22
-30.50 backward:   8 left:   3 X/Y: 102  21
-30.54 backward:   8 left:   4 X/Y: 101  10
-30.59 backward:  10 left:   4 X/Y:  97  20
-30.63 backward:   9 left:   4 X/Y:  94  19
-30.67 backward:   9 left:   4 X/Y:  91  20
-30.71 backward:   9 left:   4 X/Y:  88   8
-30.75 backward:  10 left:   5 X/Y:  84  19
-30.79 backward:   9 left:   5 X/Y:  80  19
-30.84 backward:   9 left:   5 X/Y:  78  19
-30.88 backward:   9 left:   5 X/Y:  75  19
-30.92 backward:   9 left:   5 X/Y:  71  10
-30.96 backward:  10 left:   6 X/Y:  68  10
-31.00 backward:  10 left:   6 X/Y:  65  22
-31.04 backward:   8 left:   6 X/Y:  61  22
-31.08 backward:   8 left:   6 X/Y:  58  12
-31.13 backward:   9 left:   6 X/Y:  55  25
-31.17 backward:   8 left:   7 X/Y:  52  15
-31.21 backward:   9 left:   7 X/Y:  49  26
-31.25 backward:   8 left:   7 X/Y:  46  18
-31.29 backward:   9 left:   7 X/Y:  42  18
-31.33 backward:   9 left:   7 X/Y:  39  19
-31.37 backward:   9 left:   8 X/Y:  35  21
-31.42 backward:   8 left:   8 X/Y:  33  23
-31.46 backward:   8 left:   8 X/Y:  31  36
+11.53
+11.55
+11.57
+11.59
+11.61
+11.63
+11.65
+11.67
+11.69
+11.71
+11.73
+11.75
+11.77
+11.79
+11.81
+11.83
+11.85
+11.87
+11.89
+11.91
+11.93
+11.95
+11.97
+11.99
+12.01
+12.03
+12.05
+12.07
+12.09
+12.11
+12.13
+12.15
+12.17
+12.19
+12.21
+12.23
+12.25
+12.27
+12.29
+12.31
+12.33
+12.35
+12.37
+12.39
+12.41
+12.43
+12.46
+12.48
+12.50
+12.52
+12.54
+12.56
+12.58
+12.60
+12.62
+12.64
+12.66
+12.68
+12.70
+12.72
+12.74
+12.76
+12.78
+12.80
+12.82
+12.84
+12.86
+12.88
+12.90
+12.92
+12.94
+12.96
+12.98
+13.00
+13.02
+13.04
+13.06
+13.08
+13.10
+13.12
+13.14
+13.16
+13.18
+13.20
+13.22
+13.24
+13.26
+13.28
+13.30
+13.32
+13.34
+13.36
+13.39
+13.41
+13.43
+13.45
+13.47
+13.49
+13.51
+13.53
+13.55
+13.57
+13.59
+13.61
+13.63
+13.65
+13.67
+13.69
+13.71
+13.73
+13.75
+13.77
+13.79
+13.81
+13.83
+13.85
+13.87
+13.89
+13.91
+13.93
+13.95
+13.97
+13.99
+14.01
+14.03
+14.05
+14.07
+14.09
+14.11
+14.13
+14.15
+14.17
+14.19
+14.22
+14.24
+14.26
+14.28
+14.30
+14.32
+14.34
+14.36
+14.38
+14.40
+14.42
+14.44
+14.46
+14.48
+14.50
+14.52
+14.54
+14.56
+14.58
+14.60
+14.62
+14.64
+14.66
+14.68
+14.70
+14.72
+14.74
+14.76
+14.78
+14.80
+14.82
+14.84
+14.86
+14.88
+14.90
+14.92
+14.94
+14.96
+14.98
+15.00
+15.02
+15.05
+15.07
+15.09
+15.11
+15.13
+15.15
+15.17
+15.19
+15.21
+15.23
+15.25
+15.27
+15.29
+15.31
+15.33
+15.35
+15.37
+15.39
+15.41
+15.43
+15.45
+15.47
+15.49
+15.51
+15.53
+15.55
+15.57
+15.59
+15.61
+15.63
+15.65
+15.67
+15.69
+15.71
+15.73
+15.75
+15.77
+15.79
+15.81
+15.83
+15.86
+15.88
+15.90
+15.92
+15.94
+15.96
+15.98
+16.00
+16.02
+16.04
+16.06
+16.08
+16.10
+16.12
+16.14
+16.16
+16.18
+16.20
+16.22
+16.24
+16.26
+16.28
+16.30
+16.32
+16.34
+16.36
+16.38
+16.40
+16.42
+16.44
+16.46
+16.48
+16.50
+16.52
+16.54
+16.56
+16.58
+16.60
+16.62
+16.64
+16.66
+16.68
+16.71
+16.73
+16.75
+16.77
+16.79
+16.81
+16.83
+16.85
+16.87
+16.89
+16.91
+16.93
+16.95
+16.97
+16.99
+17.01
+17.03
+17.05
+17.07
+17.09
+17.11
+17.13
+17.15
+17.17
+17.19
+17.21
+17.23
+17.25
+17.27
+17.29
+17.31
+17.33
+17.35
+17.37
+17.39
+17.41
+17.43
+17.45
+17.50 forward:   0 right:   0 X/Y: 129 197
+17.54 forward:  10 right:   2 X/Y: 127 197
+17.58 forward:  10 right:   2 X/Y: 126 196
+17.62 forward:  10 right:   2 X/Y: 125 194
+17.66 forward:  10 right:   2 X/Y: 124 193
+17.70 forward:  10 right:   2 X/Y: 124 192
+17.74 forward:  10 right:   2 X/Y: 125 193
+17.79 forward:  10 right:   2 X/Y: 122 191
+17.83 forward:  10 right:   2 X/Y: 120 190
+17.87 forward:  10 right:   3 X/Y: 121 189
+17.91 forward:  10 right:   2 X/Y: 120 188
+17.95 forward:   9 right:   3 X/Y: 120 188
+17.99 forward:   9 right:   3 X/Y: 116 187
+18.04 forward:   9 right:   3 X/Y: 116 184
+18.08 forward:   9 right:   3 X/Y: 115 183
+18.12 forward:   9 right:   3 X/Y: 116 182
+18.16 forward:   9 right:   3 X/Y: 113 181
+18.20 forward:   9 right:   3 X/Y: 113 180
+18.24 forward:   9 right:   3 X/Y: 112 178
+18.28 forward:   8 right:   3 X/Y: 112 176
+18.33 forward:   8 right:   3 X/Y: 110 174
+18.37 forward:   8 right:   3 X/Y: 109 170
+18.41 forward:   8 right:   3 X/Y: 107 167
+18.45 forward:   7 right:   3 X/Y: 107 165
+18.49 forward:   7 right:   3 X/Y: 106 161
+18.53 forward:   7 right:   3 X/Y: 103 159
+18.57 forward:   6 right:   4 X/Y: 103 156
+18.62 forward:   6 right:   4 X/Y: 101 154
+18.66 forward:   6 right:   4 X/Y:  99 149
+18.70 forward:   5 right:   4 X/Y:  97 146
+18.74 forward:   5 right:   4 X/Y:  96 143
+18.78 forward:   5 right:   4 X/Y:  93 139
+18.82 forward:   4 right:   4 X/Y:  91 135
+18.86 forward:   4 right:   4 X/Y:  89 131
+18.91 forward:   3 right:   4 X/Y:  89 126
+18.95 forward:   3 right:   4 X/Y:  86 121
+18.99 forward:   2 right:   5 X/Y:  85 116
+19.03 forward:   2 right:   5 X/Y:  82 111
+19.07 forward:   1 right:   5 X/Y:  79 106
+19.11 forward:   1 right:   5 X/Y:  78 102
+19.15 forward:   0 right:   5 X/Y:  74 109
+19.19 forward:   1 right:   5 X/Y:  71 104
+19.24 forward:   0 right:   6 X/Y:  70 101
+19.28 backward:   0 left:   6 X/Y:  65  96
+19.32 backward:   0 left:   6 X/Y:  64  78
+19.36 backward:   2 left:   6 X/Y:  67  63
+19.40 backward:   4 left:   6 X/Y:  65  71
+19.44 backward:   3 left:   6 X/Y:  62  66
+19.48 backward:   4 left:   6 X/Y:  61  62
+19.52 backward:   4 left:   6 X/Y:  59  57
+19.56 backward:   5 left:   6 X/Y:  56  54
+19.60 backward:   5 left:   7 X/Y:  55  49
+19.65 backward:   5 left:   7 X/Y:  51  48
+19.69 backward:   6 left:   7 X/Y:  46  44
+19.73 backward:   6 left:   7 X/Y:  49  39
+19.77 backward:   7 left:   7 X/Y:  48  37
+19.81 backward:   7 left:   7 X/Y:  48  34
+19.85 backward:   7 left:   7 X/Y:  43  32
+19.89 backward:   7 left:   7 X/Y:  47  29
+19.93 backward:   8 left:   7 X/Y:  45  27
+19.97 backward:   8 left:   7 X/Y:  45  24
+20.02 backward:   8 left:   7 X/Y:  41  20
+20.06 backward:   9 left:   7 X/Y:  43  21
+20.10 backward:   8 left:   7 X/Y:  40  18
+20.14 backward:   9 left:   8 X/Y:  40   8
+20.18 backward:  10 left:   8 X/Y:  39  15
+20.22 backward:   9 left:   8 X/Y:  39  14
+20.26 backward:   9 left:   8 X/Y:  38  13
+20.30 backward:   9 left:   8 X/Y:  35  13
+20.35 backward:   9 left:   8 X/Y:  38  14
+20.39 backward:   9 left:   8 X/Y:  36  12
+20.43 backward:   9 left:   8 X/Y:  32  12
+20.47 backward:   9 left:   8 X/Y:  35  11
+20.51 backward:  10 left:   8 X/Y:  30   9
+20.55 backward:  10 left:   8 X/Y:  30  12
+20.59 backward:   9 left:   8 X/Y:  28   8
+20.64 backward:  10 left:   8 X/Y:  28   9
+20.68 backward:  10 left:   8 X/Y:  25   9
+20.72 backward:  10 left:   8 X/Y:  30   9
+20.76 backward:  10 left:   8 X/Y:  30   8
+20.81 backward:  10 left:   8 X/Y:  26  14
+20.85 backward:   9 left:   8 X/Y:  24  12
+20.89 backward:   9 left:   9 X/Y:  30  10
+20.93 backward:  10 left:   8 X/Y:  29   1
+20.97 backward:  11 left:   8 X/Y:  22  11
+21.01 backward:  10 left:   9 X/Y:  27  11
+21.05 backward:  10 left:   8 X/Y:  28  12
+21.10 backward:   9 left:   8 X/Y:  29  13
+21.14 backward:   9 left:   8 X/Y:  28  14
+21.18 backward:   9 left:   8 X/Y:  28  14
+21.22 backward:   9 left:   8 X/Y:  21  16
+21.26 backward:   9 left:   9 X/Y:  27   7
+21.30 backward:  10 left:   8 X/Y:  28  11
+21.34 backward:  10 left:   8 X/Y:  23  12
+21.39 backward:   9 left:   9 X/Y:  28  20
+21.43 backward:   9 left:   8 X/Y:  27  23
+21.47 backward:   8 left:   8 X/Y:  27  19
+21.51 backward:   9 left:   8 X/Y:  27  25
+21.55 backward:   8 left:   8 X/Y:  27  27
+21.59 backward:   8 left:   8 X/Y:  28  30
+21.63 backward:   8 left:   8 X/Y:  28  19
+21.68 backward:   9 left:   8 X/Y:  24  34
+21.72 backward:   7 left:   9 X/Y:  27  38
+21.76 backward:   7 left:   8 X/Y:  27  30
+21.80 backward:   8 left:   8 X/Y:  28  31
+21.84 backward:   7 left:   8 X/Y:  30  42
+21.88 backward:   6 left:   8 X/Y:  30  42
+21.92 backward:   6 left:   8 X/Y:  30  47
+21.97 backward:   6 left:   8 X/Y:  31  48
+22.01 backward:   6 left:   8 X/Y:  31  50
+22.05 backward:   5 left:   8 X/Y:  33  52
+22.09 backward:   5 left:   8 X/Y:  32  56
+22.13 backward:   5 left:   8 X/Y:  34  58
+22.17 backward:   5 left:   8 X/Y:  36  49
+22.21 backward:   5 left:   8 X/Y:  37  59
+22.26 backward:   4 left:   8 X/Y:  38  68
+22.30 backward:   3 left:   8 X/Y:  40  72
+22.34 backward:   3 left:   8 X/Y:  40  84
+22.38 backward:   2 left:   8 X/Y:  41  79
+22.42 backward:   2 left:   7 X/Y:  43  83
+22.46 backward:   2 left:   7 X/Y:  45  85
+22.50 backward:   2 left:   7 X/Y:  46  89
+22.55 backward:   1 left:   7 X/Y:  48  94
+22.59 backward:   1 left:   7 X/Y:  51  96
+22.63 forward:   0 right:   7 X/Y:  53 101
+22.67 forward:   0 right:   7 X/Y:  56 105
+22.72 forward:   1 right:   7 X/Y:  58 109
+22.76 forward:   1 right:   6 X/Y:  62 125
+22.80 forward:   3 right:   6 X/Y:  66 118
+22.84 forward:   2 right:   6 X/Y:  69 122
+22.88 forward:   2 right:   6 X/Y:  71 127
+22.93 forward:   3 right:   6 X/Y:  74 131
+22.97 forward:   3 right:   5 X/Y:  76 135
+23.01 forward:   4 right:   5 X/Y:  80 138
+23.05 forward:   4 right:   5 X/Y:  83 142
+23.09 forward:   5 right:   5 X/Y:  84 146
+23.14 forward:   5 right:   5 X/Y:  86 149
+23.18 forward:   5 right:   5 X/Y:  88 151
+23.22 forward:   5 right:   5 X/Y:  90 154
+23.26 forward:   6 right:   4 X/Y:  91 157
+23.30 forward:   6 right:   4 X/Y:  94 159
+23.34 forward:   6 right:   4 X/Y:  93 162
+23.38 forward:   7 right:   4 X/Y:  95 163
+23.43 forward:   7 right:   4 X/Y:  95 165
+23.47 forward:   7 right:   4 X/Y:  96 168
+23.51 forward:   7 right:   4 X/Y:  99 169
+23.55 forward:   7 right:   4 X/Y:  98 170
+23.59 forward:   8 right:   4 X/Y:  98 171
+23.63 forward:   8 right:   4 X/Y: 100 172
+23.67 forward:   8 right:   4 X/Y: 100 172
+23.72 forward:   8 right:   4 X/Y: 100 174
+23.76 forward:   8 right:   4 X/Y: 100 174
+23.80 forward:   8 right:   4 X/Y:  98 174
+23.84 forward:   8 right:   4 X/Y:  97 175
+23.88 forward:   8 right:   4 X/Y:  96 175
+23.92 forward:   8 right:   4 X/Y:  97 174
+23.96 forward:   8 right:   4 X/Y:  95 174
+24.01 forward:   8 right:   4 X/Y:  94 175
+24.05 forward:   8 right:   4 X/Y:  94 173
+24.09 forward:   8 right:   4 X/Y:  92 173
+24.13 forward:   8 right:   4 X/Y:  93 172
+24.17 forward:   8 right:   4 X/Y:  91 171
+24.21 forward:   8 right:   4 X/Y:  90 170
+24.25 forward:   8 right:   4 X/Y:  87 168
+24.30 forward:   7 right:   5 X/Y:  84 167
+24.34 forward:   7 right:   5 X/Y:  82 166
+24.38 forward:   7 right:   5 X/Y:  81 163
+24.42 forward:   7 right:   5 X/Y:  79 161
+24.46 forward:   7 right:   5 X/Y:  76 159
+24.50 forward:   6 right:   5 X/Y:  73 157
+24.54 forward:   6 right:   5 X/Y:  72 154
+24.59 forward:   6 right:   6 X/Y:  68 152
+24.63 forward:   6 right:   6 X/Y:  66 150
+24.67 forward:   5 right:   6 X/Y:  64 147
+24.71 forward:   5 right:   6 X/Y:  60 144
+24.75 forward:   5 right:   6 X/Y:  55 140
+24.79 forward:   4 right:   7 X/Y:  53 136
+24.84 forward:   4 right:   7 X/Y:  51 133
+24.88 forward:   4 right:   7 X/Y:  47 130
+24.92 forward:   3 right:   7 X/Y:  43 127
+24.96 forward:   3 right:   7 X/Y:  39 122
+25.00 forward:   2 right:   8 X/Y:  35 120
+25.04 forward:   2 right:   8 X/Y:  34 118
+25.08 forward:   2 right:   8 X/Y:  30 114
+25.12 forward:   2 right:   8 X/Y:  27 111
+25.17 forward:   1 right:   8 X/Y:  24 107
+25.21 forward:   1 right:   9 X/Y:  22 104
+25.25 forward:   0 right:   9 X/Y:  18 103
+25.29 backward:   0 left:   9 X/Y:  15 100
+25.33 backward:   0 left:   9 X/Y:  10  97
+25.37 backward:   0 left:   9 X/Y:   7  99
+25.41 backward:   0 left:  10 X/Y:   6  79
+25.46 backward:   2 left:  10 X/Y:   5  88
+25.50 backward:   1 left:  10 X/Y:   3  74
+25.54 backward:   3 left:  10 X/Y:   2  76
+25.56
+25.58
+25.60
+25.62
+25.64
+25.66
+25.68
+25.70
+25.72
+25.74
+25.76
+25.78
+25.80
+25.82
+25.84
+25.86
+25.88
+25.90
+25.92
+25.94
+25.96
+25.98
+26.00
+26.02
+26.04
+26.06
+26.08
+26.10
+26.12
+26.14
+26.16
+26.19
+26.21
+26.23
+26.25
+26.27
+26.29
+26.31
+26.33
+26.35
+26.37
+26.39
+26.41
+26.43
+26.45
+26.47
+26.49
+26.51
+26.53
+26.55
+26.57
+26.59
+26.61
+26.63
+26.65
+26.67
+26.69
+26.71
+26.73
+26.75
+26.77
+26.79
+26.81
+26.83
+26.85
+26.87
+26.89
+26.91
+26.93
+26.95
+26.97
+26.99
+27.01
+27.03
+27.05
+27.07
+27.09
+27.11
+27.13
+27.16
+27.18
+27.20
+27.22
+27.24
+27.26
+27.28
+27.30
+27.32
+27.34
+27.36
+27.38
+27.40
+27.42
+27.44
+27.46
+27.48
+27.50
+27.52
+27.54
+27.56
+27.58
+27.60
+27.62
+27.64
+27.66
+27.68
+27.70
+27.72
+27.74
+27.76
+27.78
+27.80
+27.82
+27.84
+27.86
+27.88
+27.90
+27.92
+27.94
+27.96
+27.98
+28.00
+28.02
+28.04
+28.06
+28.08
+28.10
+28.13
+28.15
+28.17
+28.19
+28.21
+28.23
+28.25
+28.27
+28.29
+28.31
+28.33
+28.35
+28.37
+28.39
+28.41
+28.43
+28.45
+28.47
+28.49
+28.51
+28.53
+28.55
+28.57
+28.59
+28.61
+28.63
+28.65
+28.67
+28.69
+28.71
+28.73
+28.75
+28.77
+28.79
+28.81
+28.83
+28.85
+28.87
+28.89
+28.91
+28.93
+28.95
+28.97
+28.99
+29.01
+29.03
+29.05
+29.07
+29.09
+29.11
+29.13
+29.15
+29.18
+29.20
+29.22
+29.24
+29.26
+29.28
+29.30
+29.32
+29.34
+29.36
+29.38
+29.40
+29.42
+29.44
+29.46
+29.48
+29.50
+29.52
+29.54
+29.56
+29.58
+29.60
+29.62
+29.64
+29.66
+29.68
+29.70
+29.72
+29.74
+29.76
+29.80 backward:   3 left:  10 X/Y: 162   3
+29.84 backward:  10 left:   0 X/Y: 162   1
+29.88 backward:  11 left:   0 X/Y: 172   2
+29.92 backward:  11 left:   1 X/Y: 179   3
+29.96 backward:  10 left:   1 X/Y: 184   1
+30.01 backward:  11 left:   2 X/Y: 192   4
+30.05 backward:  10 left:   2 X/Y: 199   3
+30.09 backward:  10 left:   2 X/Y: 204   5
+30.13 backward:  10 left:   3 X/Y: 209   4
+30.17 backward:  10 left:   3 X/Y: 214   5
+30.21 backward:  10 left:   3 X/Y: 220   8
+30.25 backward:  10 left:   4 X/Y: 225   8
+30.29 backward:  10 left:   4 X/Y: 230   9
+30.34 backward:  10 left:   4 X/Y: 236  13
+30.38 backward:   9 left:   5 X/Y: 241  14
+30.42 backward:   9 left:   5 X/Y: 246  17
+30.46 backward:   9 left:   5 X/Y: 251  17
+30.48
+30.52 backward:   9 left:   6 X/Y: 258  23
+30.56 backward:   8 left:   6 X/Y: 262  26
+30.60 backward:   8 left:   6 X/Y: 267  22
+30.65 backward:   8 left:   7 X/Y: 271  28
+30.69 backward:   8 left:   7 X/Y: 275  26
+30.73 backward:   8 left:   7 X/Y: 277  27
+30.75
+30.77
+30.79
+30.83 backward:   8 left:   7 X/Y: 289  28
+30.87 backward:   8 left:   8 X/Y: 292  36
+30.91 backward:   7 left:   8 X/Y: 293  26
+30.95 backward:   8 left:   8 X/Y: 296  31
+31.00 backward:   7 left:   9 X/Y: 297  30
+31.04 backward:   8 left:   9 X/Y: 300  30
+31.08 backward:   8 left:   9 X/Y: 303  33
+31.12 backward:   7 left:   9 X/Y: 309  32
+31.14
+31.16
+31.20 backward:   7 left:   9 X/Y: 312  34
+31.22
+31.24
+31.26
+31.28
+31.30
+31.32
+31.34
+31.36
+31.38
+31.40
+31.42
+31.45
+31.47
+31.49
+31.51
+31.53
+31.55
+31.57
+31.59
+31.61
+31.63
+31.65
+31.67
+31.69
+31.71
+31.73
+31.75
+31.77
+31.79
+31.81
+31.83
+31.85
+31.87
+31.89
+31.91
+31.93
+31.95
+31.97
+31.99
+32.01
+32.03
+32.05
+32.07
+32.09
+32.11
+32.13
+32.15
+32.17
+32.19
+32.21
+32.24
+32.26
+32.28
+32.30
+32.32
+32.34
+32.36
+32.38
+32.40
+32.42
+32.44
+32.46
+32.48
+32.50
+32.52
+32.54
+32.56
+32.58
+32.60
+32.62
+32.64
+32.66
+32.68
+32.70
+32.72
+32.74
+32.76
+32.78
+32.80
+32.82
+32.84
+32.86
+32.88
+32.90
+32.92
+32.94
+32.96
+32.98
+33.00
+33.03
+33.05
+33.07
+33.09
+33.11
+33.13
+33.15
+33.17
+33.19
+33.21
+33.23
+33.25
+33.27
+33.29
+33.31
+33.33
+33.35
+33.37
+33.39
+33.41
+33.43
+33.45
+33.47
+33.49
+33.51
+33.53
+33.55
+33.57
+33.59
+33.61
+33.63
+33.65
+33.67
+33.69
+33.71
+33.73
+33.75
+33.77
+33.79
+33.81
+33.83
+33.85
+33.87
+33.90
+33.92
+33.94
+33.96
+33.98
+34.00
+34.02
+34.04
+34.06
+34.08
+34.10
+34.12
+34.14
+34.16
+34.18
+34.20
+34.22
+34.24
+34.26
+34.28
+34.30
+34.32
+34.34
+34.36
+34.38
+34.40
+34.42
+34.44
+34.46
+34.48
+34.50
+34.52
+34.54
+34.56
+34.58
+34.60
+34.62
+34.64
+34.66
+34.68
+34.71
+34.73
+34.75
+34.77
+34.79
+34.81
+34.83
+34.85
+34.87
+34.89
+34.91
+34.93
+34.95
+34.97
+34.99
+35.01
+35.03
+35.05
+35.07
+35.09
+35.11
+35.13
+35.15
+35.17
+35.19
+35.21
+35.23
+35.25
+35.27
+35.29
+35.31
+35.33
+35.35
+35.37
+35.40
+35.42
+35.44
+35.46
+35.48
+35.50
+35.52
+35.54
+35.56
+35.58
+35.60
+35.62
+35.64
+35.66
+35.68
+35.70
+35.72
+35.74
+35.76
+35.78
+35.80
+35.82
+35.84
+35.86
+35.88
+35.90
+35.92
+35.94
+35.96
+35.98
+36.00
+36.02
+36.04
+36.06
+36.08
+36.10
+36.12
+36.14
+36.16
+36.18
+36.20
+36.22
+36.24
+36.26
+36.29
+36.31
+36.33
+36.35
+36.37
+36.39
+36.41
+36.43
+36.45
+36.47
+36.49
+36.51
+36.53
+36.55
+36.57
+36.59
+36.61
+36.63
+36.65
+36.67
+36.69
+36.71
+36.73
+36.75
+36.77
+36.79
+36.81
+36.83
+36.85
+36.87
+36.89
+36.91
+36.93
+36.95
+36.97
+36.99
+37.01
+37.03
+37.05
+37.07
+37.09
+37.11
+37.13
+37.15
+37.17
+37.19
+37.21
+37.23
+37.25
+37.27
+37.29
+37.31
+37.33
+37.35
+37.37
+37.39
+37.41
+37.43
+37.46
+37.48
+37.50
+37.52
+37.54
+37.56
+37.58
+37.60
+37.62
+37.64
+37.66
+37.68
+37.70
+37.72
+37.74
+37.76
+37.78
+37.80
+37.82
+37.84
+37.86
+37.88
+37.90
+37.92
+37.94
+37.96
+37.98
+38.00
+38.02
+38.04
+38.06
+38.08
+38.10
+38.12
+38.14
+38.16
+38.18
+38.20
+38.22
+38.24
+38.26
+38.28
+38.30
+38.32
+38.34
+38.36
+38.38
+38.40
+38.42
+38.44
+38.46
+38.48
+38.50
+38.52
+38.54
+38.56
+38.58
+38.60
+38.63
+38.65
+38.67
+38.69
+38.71
+38.73
+38.75
+38.77
+38.79
+38.81
+38.83
+38.85
+38.87
+38.89
+38.91
+38.93
+38.95
+38.97
+38.99
+39.01
+39.03
+39.05
+39.07
+39.09
+39.11
+39.13
+39.15
+39.17
+39.19
+39.21
+39.23
+39.25
+39.27
+39.29
+39.31
+39.33
+39.35
+39.37
+39.39
+39.43 backward:   7 left:  10 X/Y: 169   2
+39.45
+39.47
+39.51 backward:  11 left:   1 X/Y: 160   9
+39.55 backward:  10 left:   0 X/Y: 154  10
+39.60 backward:  10 left:   0 X/Y: 151  10
+39.64 backward:  10 left:   1 X/Y: 147  12
+39.68 backward:   9 left:   1 X/Y: 142  12
+39.72 backward:   9 left:   1 X/Y: 139  18
+39.76 backward:   9 left:   1 X/Y: 137  24
+39.80 backward:   8 left:   1 X/Y: 133  27
+39.84 backward:   8 left:   2 X/Y: 130  31
+39.89 backward:   7 left:   2 X/Y: 125  27
+39.93 backward:   8 left:   2 X/Y: 122  31
+39.97 backward:   7 left:   2 X/Y: 122  30
+40.01 backward:   8 left:   2 X/Y: 120  28
+40.05 backward:   8 left:   3 X/Y: 117  37
+40.10 backward:   7 left:   3 X/Y: 114  42
+40.14 backward:   6 left:   3 X/Y: 110  46
+40.18 backward:   6 left:   3 X/Y: 104  50
+40.22 backward:   5 left:   4 X/Y: 104  49
+40.26 backward:   5 left:   4 X/Y: 102  58
+40.30 backward:   5 left:   4 X/Y:  97  64
+40.34 backward:   4 left:   4 X/Y:  97  66
+40.39 backward:   4 left:   4 X/Y:  90  85
+40.43 backward:   2 left:   4 X/Y:  91  75
+40.47 backward:   3 left:   4 X/Y:  87  80
+40.51 backward:   2 left:   5 X/Y:  88  69
+40.55 backward:   3 left:   5 X/Y:  85  91
+40.59 backward:   1 left:   5 X/Y:  85  90
+40.64 backward:   1 left:   5 X/Y:  84  80
+40.68 backward:   2 left:   5 X/Y:  81  85
+40.72 backward:   2 left:   5 X/Y:  82  89
+40.76 forward:   1 right:   5 X/Y:  79 120
+40.80 forward:   2 right:   5 X/Y:  80 110
+40.84 forward:   1 right:   5 X/Y:  79 115
+40.88 forward:   2 right:   5 X/Y:  77 118
+40.93 forward:   2 right:   5 X/Y:  75 122
+40.97 forward:   2 right:   5 X/Y:  77 138
+41.01 forward:   4 right:   5 X/Y:  75 132
+41.05 forward:   3 right:   5 X/Y:  77 135
+41.09 forward:   4 right:   5 X/Y:  75 137
+41.13 forward:   4 right:   5 X/Y:  77 142
+41.18 forward:   5 right:   5 X/Y:  76 147
+41.22 forward:   5 right:   5 X/Y:  75 150
+41.26 forward:   5 right:   5 X/Y:  74 152
+41.30 forward:   6 right:   5 X/Y:  73 155
+41.34 forward:   6 right:   5 X/Y:  73 158
+41.38 forward:   6 right:   5 X/Y:  72 161
+41.42 forward:   7 right:   6 X/Y:  70 164
+41.47 forward:   7 right:   6 X/Y:  71 165
+41.51 forward:   7 right:   6 X/Y:  71 168
+41.55 forward:   7 right:   6 X/Y:  70 170
+41.59 forward:   8 right:   6 X/Y:  68 172
+41.63 forward:   8 right:   6 X/Y:  69 172
+41.67 forward:   8 right:   6 X/Y:  68 174
+41.72 forward:   8 right:   6 X/Y:  68 175
+41.76 forward:   8 right:   6 X/Y:  66 177
+41.80 forward:   8 right:   6 X/Y:  66 177
+41.84 forward:   8 right:   6 X/Y:  65 179
+41.88 forward:   8 right:   6 X/Y:  63 179
+41.92 forward:   8 right:   6 X/Y:  62 179
+41.96 forward:   8 right:   6 X/Y:  61 180
+42.01 forward:   9 right:   6 X/Y:  60 181
+42.05 forward:   9 right:   6 X/Y:  58 181
+42.09 forward:   9 right:   6 X/Y:  57 181
+42.13 forward:   9 right:   6 X/Y:  53 182
+42.17 forward:   9 right:   7 X/Y:  55 182
+42.21 forward:   9 right:   7 X/Y:  52 181
+42.25 forward:   9 right:   7 X/Y:  51 181
+42.30 forward:   9 right:   7 X/Y:  48 181
+42.34 forward:   9 right:   7 X/Y:  47 180
+42.38 forward:   9 right:   7 X/Y:  45 180
+42.42 forward:   9 right:   7 X/Y:  43 180
+42.46 forward:   9 right:   7 X/Y:  43 178
+42.50 forward:   8 right:   7 X/Y:  39 177
+42.54 forward:   8 right:   8 X/Y:  37 177
+42.59 forward:   8 right:   8 X/Y:  35 177
+42.63 forward:   8 right:   8 X/Y:  34 176
+42.67 forward:   8 right:   8 X/Y:  31 174
+42.71 forward:   8 right:   8 X/Y:  28 175
+42.75 forward:   8 right:   8 X/Y:  27 173
+42.79 forward:   8 right:   8 X/Y:  25 172
+42.83 forward:   8 right:   8 X/Y:  21 170
+42.88 forward:   8 right:   9 X/Y:  20 167
+42.92 forward:   7 right:   9 X/Y:  18 168
+42.96 forward:   7 right:   9 X/Y:  14 166
+43.00 forward:   7 right:   9 X/Y:  13 167
+43.04 forward:   7 right:   9 X/Y:   9 164
+43.09 forward:   7 right:   9 X/Y:   8 163
+43.13 forward:   7 right:  10 X/Y:   8 162
+43.17 forward:   7 right:  10 X/Y:   5 158
+43.21 forward:   6 right:  10 X/Y:   4 165
+43.23
+43.25
+43.27
+43.29
+43.31
+43.33
+43.36
+43.38
+43.40
+43.42
+43.44
+43.46
+43.48
+43.50
+43.52
+43.54
+43.56
+43.58
+43.60
+43.62
+43.64
+43.66
+43.68
+43.70
+43.72
+43.74
+43.76
+43.78
+43.80
+43.82
+43.84
+43.86
+43.88
+43.90
+43.92
+43.94
+43.96
+43.98
+44.00
+44.02
+44.04
+44.06
+44.08
+44.10
+44.12
+44.14
+44.16
+44.18
+44.21
+44.23
+44.25
+44.27
+44.29
+44.31
+44.33
+44.35
+44.37
+44.39
+44.41
+44.43
+44.45
+44.47
+44.49
+44.51
+44.53
+44.55
+44.57
+44.59
+44.61
+44.63
+44.65
+44.67
+44.69
+44.71
+44.73
+44.75
+44.77
+44.79
+44.81
+44.83
+44.85
+44.88
+44.90
+44.92
+44.94
+44.96
+44.98
+45.00
+45.02
+45.04
+45.06
+45.08
+45.10
+45.12
+45.14
+45.16
+45.18
+45.20
+45.22
+45.24
+45.26
+45.28
+45.30
+45.32
+45.34
+45.36
+45.38
+45.40
+45.42
+45.44
+45.46
+45.49
+45.51
+45.53
+45.55
+45.57
+45.59
+45.61
+45.63
+45.65
+45.67
+45.69
+45.71
+45.73
+45.75
+45.77
+45.79
+45.81
+45.83
+45.85
+45.87
+45.89
+45.91
+45.93
+45.95
+45.97
+45.99
+46.01
+46.03
+46.05
+46.07
+46.09
+46.11
+46.13
+46.15
+46.17
+46.19
+46.21
+46.23
+46.25
+46.28
+46.30
+46.32
+46.34
+46.36
+46.38
+46.40
+46.42
+46.44
+46.46
+46.48
+46.50
+46.52
+46.54
+46.56
+46.58
+46.60
+46.62
+46.64
+46.66
+46.68
+46.70
+46.72
+46.74
+46.76
+46.78
+46.80
+46.82
+46.84
+46.86
+46.88
+46.90
+46.92
+46.94
+46.96
+46.98
+47.00
+47.02
+47.04
+47.06
+47.08
+47.10
+47.12
+47.14
+47.16
+47.18
+47.20
+47.22
+47.24
+47.26
+47.28
+47.30
+47.33
+47.35
+47.37
+47.39
+47.41
+47.43
+47.45
+47.47
+47.49
+47.51
+47.53
+47.55
+47.57
+47.59
+47.61
+47.63
+47.65
+47.67
+47.69
+47.71
+47.73
+47.75
+47.77
+47.79
+47.81
+47.83
+47.85
+47.87
+47.89
+47.91
+47.93
+47.95
+47.97
+47.99
+48.01
+48.03
+48.05
+48.07
+48.09
+48.11
+48.13
+48.15
+48.17
+48.19
+48.21
+48.23
+48.25
+48.27
+48.30
+48.32
+48.34
+48.36
+48.38
+48.40
+48.42
+48.44
+48.46
+48.48
+48.50
+48.52
+48.54
+48.56
+48.58
+48.60
+48.62
+48.64
+48.66
+48.68
+48.70
+48.72
+48.74
+48.76
+48.78
+48.80
+48.82
+48.84
+48.86
+48.88
+48.90
+48.92
+48.94
+48.97
+48.99
+49.01
+49.03
+49.05
+49.07
+49.09
+49.11
+49.13
+49.15
+49.17
+49.19
+49.21
+49.23
+49.25
+49.27
+49.29
+49.31
+49.33
+49.35
+49.37
+49.39
+49.41
+49.43
+49.45
+49.47
+49.49
+49.51
+49.54
+49.56
+49.58
+49.60
+49.62
+49.64
+49.66
+49.68
+49.70
+49.72
+49.74
+49.76
+49.78
+49.80
+49.82
+49.84
+49.86
+49.88
+49.90
+49.92
+49.94
+49.96
+49.98
+50.00
+50.02
+50.04
+50.06
+50.08
+50.10
+50.12
+50.14
+50.16
+50.18
+50.20
+50.22
+50.25
+50.27
+50.29
+50.31
+50.33
+50.35
+50.37
+50.39
+50.41
+50.43
+50.45
+50.47
+50.49
+50.51
+50.53
+50.55
+50.57
+50.59
+50.61
+50.63
+50.65
+50.67
+50.69

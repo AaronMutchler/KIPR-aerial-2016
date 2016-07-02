@@ -6,6 +6,7 @@ import bebop
 import time
 import pixy
 import os
+import create_library
 
 class Point(object):
     def __init__(self, x, y):
@@ -38,7 +39,12 @@ TIME = time.time()
 LOG_FILE = None
 
 def main():
-    
+    create_library.make_functions_for_the_create_robot()
+    create_library.connect_to_arduino()
+    time.sleep(1.0)
+    create_library.start() 
+    create_library.full()
+
     drone = bebop.Bebop(8080, True)
     drone._send_string('send_to_drone_true')
 
@@ -51,7 +57,7 @@ def main():
 
     time.sleep(1)
     #drone.move_seconds('forward', 10, 2)
-    
+    create_library.drive_direct(50, 50) 
     desired = CENTER
     pid_loop(drone, CENTER, BLOCKS)
 
