@@ -42,6 +42,9 @@ def main():
     create_library.make_functions_for_the_create_robot()
     create_library.connect_to_arduino()
     time.sleep(1.0)
+    while True:
+        if create_library.read_chr() == 's':
+            break
     create_library.start() 
     create_library.full()
 

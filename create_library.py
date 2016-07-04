@@ -89,6 +89,8 @@ def high_low_bytes(two_byte_number):
     low = (two_byte_number & 0x00FF)
     return high, low
 
+def read_chr():
+    return SERIAL_CONNECTION.read()
 
 # For testing
 def main():

@@ -1,0 +1,4 @@
+#!/bin/bash
+# starts the aerial contest scripts
+
+node droneInterface
